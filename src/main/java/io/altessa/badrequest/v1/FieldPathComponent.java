@@ -22,9 +22,9 @@ private static final long serialVersionUID = 0L;
   }
   private FieldPathComponent() {
     name_ = "";
-    type_ = 1;
-    mapKeyType_ = 1;
-    mapValueType_ = 1;
+    type_ = 0;
+    mapKeyType_ = 0;
+    mapValueType_ = 0;
   }
 
   @java.lang.Override
@@ -159,9 +159,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      if (bs.isValidUtf8()) {
-        name_ = s;
-      }
+      name_ = s;
       return s;
     }
   }
@@ -189,13 +187,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 3;
-  private int type_ = 1;
+  private int type_ = 0;
   /**
    * <pre>
    * Data type of the field.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type type = 3 [json_name = "type"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
    * @return Whether the type field is set.
    */
   @java.lang.Override public boolean hasType() {
@@ -206,22 +204,33 @@ private static final long serialVersionUID = 0L;
    * Data type of the field.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type type = 3 [json_name = "type"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
+   * @return The enum numeric value on the wire for type.
+   */
+  @java.lang.Override public int getTypeValue() {
+    return type_;
+  }
+  /**
+   * <pre>
+   * Data type of the field.
+   * </pre>
+   *
+   * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
    * @return The type.
    */
-  @java.lang.Override public com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type getType() {
-    com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type result = com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.forNumber(type_);
-    return result == null ? com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.TYPE_DOUBLE : result;
+  @java.lang.Override public io.altessa.badrequest.v1.FieldType getType() {
+    io.altessa.badrequest.v1.FieldType result = io.altessa.badrequest.v1.FieldType.forNumber(type_);
+    return result == null ? io.altessa.badrequest.v1.FieldType.UNRECOGNIZED : result;
   }
 
   public static final int MAP_KEY_TYPE_FIELD_NUMBER = 4;
-  private int mapKeyType_ = 1;
+  private int mapKeyType_ = 0;
   /**
    * <pre>
    * For map fields, specifies the data type of the map keys.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type map_key_type = 4 [json_name = "mapKeyType"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
    * @return Whether the mapKeyType field is set.
    */
   @java.lang.Override public boolean hasMapKeyType() {
@@ -232,22 +241,33 @@ private static final long serialVersionUID = 0L;
    * For map fields, specifies the data type of the map keys.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type map_key_type = 4 [json_name = "mapKeyType"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
+   * @return The enum numeric value on the wire for mapKeyType.
+   */
+  @java.lang.Override public int getMapKeyTypeValue() {
+    return mapKeyType_;
+  }
+  /**
+   * <pre>
+   * For map fields, specifies the data type of the map keys.
+   * </pre>
+   *
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
    * @return The mapKeyType.
    */
-  @java.lang.Override public com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type getMapKeyType() {
-    com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type result = com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.forNumber(mapKeyType_);
-    return result == null ? com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.TYPE_DOUBLE : result;
+  @java.lang.Override public io.altessa.badrequest.v1.FieldType getMapKeyType() {
+    io.altessa.badrequest.v1.FieldType result = io.altessa.badrequest.v1.FieldType.forNumber(mapKeyType_);
+    return result == null ? io.altessa.badrequest.v1.FieldType.UNRECOGNIZED : result;
   }
 
   public static final int MAP_VALUE_TYPE_FIELD_NUMBER = 5;
-  private int mapValueType_ = 1;
+  private int mapValueType_ = 0;
   /**
    * <pre>
    * For map fields, specifies the data type of the map values.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type map_value_type = 5 [json_name = "mapValueType"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
    * @return Whether the mapValueType field is set.
    */
   @java.lang.Override public boolean hasMapValueType() {
@@ -258,12 +278,23 @@ private static final long serialVersionUID = 0L;
    * For map fields, specifies the data type of the map values.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type map_value_type = 5 [json_name = "mapValueType"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
+   * @return The enum numeric value on the wire for mapValueType.
+   */
+  @java.lang.Override public int getMapValueTypeValue() {
+    return mapValueType_;
+  }
+  /**
+   * <pre>
+   * For map fields, specifies the data type of the map values.
+   * </pre>
+   *
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
    * @return The mapValueType.
    */
-  @java.lang.Override public com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type getMapValueType() {
-    com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type result = com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.forNumber(mapValueType_);
-    return result == null ? com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.TYPE_DOUBLE : result;
+  @java.lang.Override public io.altessa.badrequest.v1.FieldType getMapValueType() {
+    io.altessa.badrequest.v1.FieldType result = io.altessa.badrequest.v1.FieldType.forNumber(mapValueType_);
+    return result == null ? io.altessa.badrequest.v1.FieldType.UNRECOGNIZED : result;
   }
 
   public static final int IS_REPEATED_FIELD_NUMBER = 6;
@@ -467,7 +498,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      if (bs.isValidUtf8() && (mapKeyCase_ == 12)) {
+      if (mapKeyCase_ == 12) {
         mapKey_ = s;
       }
       return s;
@@ -890,9 +921,9 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       number_ = 0;
       name_ = "";
-      type_ = 1;
-      mapKeyType_ = 1;
-      mapValueType_ = 1;
+      type_ = 0;
+      mapKeyType_ = 0;
+      mapValueType_ = 0;
       isRepeated_ = false;
       repeatedIndex_ = 0L;
       mapKeyCase_ = 0;
@@ -1094,44 +1125,23 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 18: {
-              name_ = input.readBytes();
+              name_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
-              int tmpRaw = input.readEnum();
-              com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type tmpValue =
-                  com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.forNumber(tmpRaw);
-              if (tmpValue == null) {
-                mergeUnknownVarintField(3, tmpRaw);
-              } else {
-                type_ = tmpRaw;
-                bitField0_ |= 0x00000004;
-              }
+              type_ = input.readEnum();
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
-              int tmpRaw = input.readEnum();
-              com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type tmpValue =
-                  com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.forNumber(tmpRaw);
-              if (tmpValue == null) {
-                mergeUnknownVarintField(4, tmpRaw);
-              } else {
-                mapKeyType_ = tmpRaw;
-                bitField0_ |= 0x00000008;
-              }
+              mapKeyType_ = input.readEnum();
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
-              int tmpRaw = input.readEnum();
-              com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type tmpValue =
-                  com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.forNumber(tmpRaw);
-              if (tmpValue == null) {
-                mergeUnknownVarintField(5, tmpRaw);
-              } else {
-                mapValueType_ = tmpRaw;
-                bitField0_ |= 0x00000010;
-              }
+              mapValueType_ = input.readEnum();
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 48: {
@@ -1165,9 +1175,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 88
             case 98: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               mapKeyCase_ = 12;
-              mapKey_ = bs;
+              mapKey_ = s;
               break;
             } // case 98
             default: {
@@ -1284,9 +1294,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
+        name_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -1356,19 +1364,20 @@ private static final long serialVersionUID = 0L;
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
 
-    private int type_ = 1;
+    private int type_ = 0;
     /**
      * <pre>
      * Data type of the field.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type type = 3 [json_name = "type"];</code>
+     * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
      * @return Whether the type field is set.
      */
     @java.lang.Override public boolean hasType() {
@@ -1379,24 +1388,50 @@ private static final long serialVersionUID = 0L;
      * Data type of the field.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type type = 3 [json_name = "type"];</code>
-     * @return The type.
+     * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override
-    public com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type getType() {
-      com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type result = com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.forNumber(type_);
-      return result == null ? com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.TYPE_DOUBLE : result;
+    @java.lang.Override public int getTypeValue() {
+      return type_;
     }
     /**
      * <pre>
      * Data type of the field.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type type = 3 [json_name = "type"];</code>
+     * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypeValue(int value) {
+      type_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Data type of the field.
+     * </pre>
+     *
+     * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public io.altessa.badrequest.v1.FieldType getType() {
+      io.altessa.badrequest.v1.FieldType result = io.altessa.badrequest.v1.FieldType.forNumber(type_);
+      return result == null ? io.altessa.badrequest.v1.FieldType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Data type of the field.
+     * </pre>
+     *
+     * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
-    public Builder setType(com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type value) {
+    public Builder setType(io.altessa.badrequest.v1.FieldType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1410,23 +1445,23 @@ private static final long serialVersionUID = 0L;
      * Data type of the field.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type type = 3 [json_name = "type"];</code>
+     * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      type_ = 1;
+      type_ = 0;
       onChanged();
       return this;
     }
 
-    private int mapKeyType_ = 1;
+    private int mapKeyType_ = 0;
     /**
      * <pre>
      * For map fields, specifies the data type of the map keys.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type map_key_type = 4 [json_name = "mapKeyType"];</code>
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
      * @return Whether the mapKeyType field is set.
      */
     @java.lang.Override public boolean hasMapKeyType() {
@@ -1437,24 +1472,50 @@ private static final long serialVersionUID = 0L;
      * For map fields, specifies the data type of the map keys.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type map_key_type = 4 [json_name = "mapKeyType"];</code>
-     * @return The mapKeyType.
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
+     * @return The enum numeric value on the wire for mapKeyType.
      */
-    @java.lang.Override
-    public com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type getMapKeyType() {
-      com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type result = com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.forNumber(mapKeyType_);
-      return result == null ? com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.TYPE_DOUBLE : result;
+    @java.lang.Override public int getMapKeyTypeValue() {
+      return mapKeyType_;
     }
     /**
      * <pre>
      * For map fields, specifies the data type of the map keys.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type map_key_type = 4 [json_name = "mapKeyType"];</code>
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
+     * @param value The enum numeric value on the wire for mapKeyType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMapKeyTypeValue(int value) {
+      mapKeyType_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * For map fields, specifies the data type of the map keys.
+     * </pre>
+     *
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
+     * @return The mapKeyType.
+     */
+    @java.lang.Override
+    public io.altessa.badrequest.v1.FieldType getMapKeyType() {
+      io.altessa.badrequest.v1.FieldType result = io.altessa.badrequest.v1.FieldType.forNumber(mapKeyType_);
+      return result == null ? io.altessa.badrequest.v1.FieldType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * For map fields, specifies the data type of the map keys.
+     * </pre>
+     *
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
      * @param value The mapKeyType to set.
      * @return This builder for chaining.
      */
-    public Builder setMapKeyType(com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type value) {
+    public Builder setMapKeyType(io.altessa.badrequest.v1.FieldType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1468,23 +1529,23 @@ private static final long serialVersionUID = 0L;
      * For map fields, specifies the data type of the map keys.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type map_key_type = 4 [json_name = "mapKeyType"];</code>
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMapKeyType() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      mapKeyType_ = 1;
+      mapKeyType_ = 0;
       onChanged();
       return this;
     }
 
-    private int mapValueType_ = 1;
+    private int mapValueType_ = 0;
     /**
      * <pre>
      * For map fields, specifies the data type of the map values.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type map_value_type = 5 [json_name = "mapValueType"];</code>
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
      * @return Whether the mapValueType field is set.
      */
     @java.lang.Override public boolean hasMapValueType() {
@@ -1495,24 +1556,50 @@ private static final long serialVersionUID = 0L;
      * For map fields, specifies the data type of the map values.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type map_value_type = 5 [json_name = "mapValueType"];</code>
-     * @return The mapValueType.
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
+     * @return The enum numeric value on the wire for mapValueType.
      */
-    @java.lang.Override
-    public com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type getMapValueType() {
-      com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type result = com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.forNumber(mapValueType_);
-      return result == null ? com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.TYPE_DOUBLE : result;
+    @java.lang.Override public int getMapValueTypeValue() {
+      return mapValueType_;
     }
     /**
      * <pre>
      * For map fields, specifies the data type of the map values.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type map_value_type = 5 [json_name = "mapValueType"];</code>
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
+     * @param value The enum numeric value on the wire for mapValueType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMapValueTypeValue(int value) {
+      mapValueType_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * For map fields, specifies the data type of the map values.
+     * </pre>
+     *
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
+     * @return The mapValueType.
+     */
+    @java.lang.Override
+    public io.altessa.badrequest.v1.FieldType getMapValueType() {
+      io.altessa.badrequest.v1.FieldType result = io.altessa.badrequest.v1.FieldType.forNumber(mapValueType_);
+      return result == null ? io.altessa.badrequest.v1.FieldType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * For map fields, specifies the data type of the map values.
+     * </pre>
+     *
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
      * @param value The mapValueType to set.
      * @return This builder for chaining.
      */
-    public Builder setMapValueType(com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type value) {
+    public Builder setMapValueType(io.altessa.badrequest.v1.FieldType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1526,12 +1613,12 @@ private static final long serialVersionUID = 0L;
      * For map fields, specifies the data type of the map values.
      * </pre>
      *
-     * <code>optional .google.protobuf.FieldDescriptorProto.Type map_value_type = 5 [json_name = "mapValueType"];</code>
+     * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMapValueType() {
       bitField0_ = (bitField0_ & ~0x00000010);
-      mapValueType_ = 1;
+      mapValueType_ = 0;
       onChanged();
       return this;
     }
@@ -1911,9 +1998,7 @@ private static final long serialVersionUID = 0L;
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (mapKeyCase_ == 12) {
-          if (bs.isValidUtf8()) {
-            mapKey_ = s;
-          }
+          mapKey_ = s;
         }
         return s;
       } else {
@@ -1992,6 +2077,7 @@ private static final long serialVersionUID = 0L;
     public Builder setStringKeyBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       mapKeyCase_ = 12;
       mapKey_ = value;
       onChanged();
@@ -2023,7 +2109,7 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  @java.lang.Deprecated public static final com.google.protobuf.Parser<FieldPathComponent>
+  private static final com.google.protobuf.Parser<FieldPathComponent>
       PARSER = new com.google.protobuf.AbstractParser<FieldPathComponent>() {
     @java.lang.Override
     public FieldPathComponent parsePartialFrom(

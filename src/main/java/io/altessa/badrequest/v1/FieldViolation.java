@@ -87,9 +87,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      if (bs.isValidUtf8()) {
-        fieldPath_ = s;
-      }
+      fieldPath_ = s;
       return s;
     }
   }
@@ -123,7 +121,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Human-readable message describing the violation.
-   * This should be specific to the field and the error condition.
    * </pre>
    *
    * <code>optional string message = 2 [json_name = "message"];</code>
@@ -136,7 +133,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Human-readable message describing the violation.
-   * This should be specific to the field and the error condition.
    * </pre>
    *
    * <code>optional string message = 2 [json_name = "message"];</code>
@@ -151,16 +147,13 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      if (bs.isValidUtf8()) {
-        message_ = s;
-      }
+      message_ = s;
       return s;
     }
   }
   /**
    * <pre>
    * Human-readable message describing the violation.
-   * This should be specific to the field and the error condition.
    * </pre>
    *
    * <code>optional string message = 2 [json_name = "message"];</code>
@@ -187,7 +180,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Application-specific error code or identifier for this type of violation.
-   * This can be used by clients for programmatic error handling.
    * </pre>
    *
    * <code>optional string code = 3 [json_name = "code"];</code>
@@ -200,7 +192,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Application-specific error code or identifier for this type of violation.
-   * This can be used by clients for programmatic error handling.
    * </pre>
    *
    * <code>optional string code = 3 [json_name = "code"];</code>
@@ -215,16 +206,13 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      if (bs.isValidUtf8()) {
-        code_ = s;
-      }
+      code_ = s;
       return s;
     }
   }
   /**
    * <pre>
    * Application-specific error code or identifier for this type of violation.
-   * This can be used by clients for programmatic error handling.
    * </pre>
    *
    * <code>optional string code = 3 [json_name = "code"];</code>
@@ -251,8 +239,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Structured representation of the path to the field that caused the violation.
-   * This provides more detailed information than `field_path` and can be used for
-   * more precise error handling or display.
    * </pre>
    *
    * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -264,8 +250,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Structured representation of the path to the field that caused the violation.
-   * This provides more detailed information than `field_path` and can be used for
-   * more precise error handling or display.
    * </pre>
    *
    * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -278,8 +262,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Structured representation of the path to the field that caused the violation.
-   * This provides more detailed information than `field_path` and can be used for
-   * more precise error handling or display.
    * </pre>
    *
    * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -291,8 +273,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Structured representation of the path to the field that caused the violation.
-   * This provides more detailed information than `field_path` and can be used for
-   * more precise error handling or display.
    * </pre>
    *
    * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -304,8 +284,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Structured representation of the path to the field that caused the violation.
-   * This provides more detailed information than `field_path` and can be used for
-   * more precise error handling or display.
    * </pre>
    *
    * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -741,24 +719,24 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              fieldPath_ = input.readBytes();
+              fieldPath_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              message_ = input.readBytes();
+              message_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
-              code_ = input.readBytes();
+              code_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               io.altessa.badrequest.v1.FieldPathComponent m =
                   input.readMessage(
-                      io.altessa.badrequest.v1.FieldPathComponent.PARSER,
+                      io.altessa.badrequest.v1.FieldPathComponent.parser(),
                       extensionRegistry);
               if (fieldPathComponentsBuilder_ == null) {
                 ensureFieldPathComponentsIsMutable();
@@ -813,9 +791,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          fieldPath_ = s;
-        }
+        fieldPath_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -889,6 +865,7 @@ private static final long serialVersionUID = 0L;
     public Builder setFieldPathBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       fieldPath_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -899,7 +876,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Human-readable message describing the violation.
-     * This should be specific to the field and the error condition.
      * </pre>
      *
      * <code>optional string message = 2 [json_name = "message"];</code>
@@ -911,7 +887,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Human-readable message describing the violation.
-     * This should be specific to the field and the error condition.
      * </pre>
      *
      * <code>optional string message = 2 [json_name = "message"];</code>
@@ -923,9 +898,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          message_ = s;
-        }
+        message_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -934,7 +907,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Human-readable message describing the violation.
-     * This should be specific to the field and the error condition.
      * </pre>
      *
      * <code>optional string message = 2 [json_name = "message"];</code>
@@ -956,7 +928,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Human-readable message describing the violation.
-     * This should be specific to the field and the error condition.
      * </pre>
      *
      * <code>optional string message = 2 [json_name = "message"];</code>
@@ -974,7 +945,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Human-readable message describing the violation.
-     * This should be specific to the field and the error condition.
      * </pre>
      *
      * <code>optional string message = 2 [json_name = "message"];</code>
@@ -989,7 +959,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Human-readable message describing the violation.
-     * This should be specific to the field and the error condition.
      * </pre>
      *
      * <code>optional string message = 2 [json_name = "message"];</code>
@@ -999,6 +968,7 @@ private static final long serialVersionUID = 0L;
     public Builder setMessageBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       message_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1009,7 +979,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Application-specific error code or identifier for this type of violation.
-     * This can be used by clients for programmatic error handling.
      * </pre>
      *
      * <code>optional string code = 3 [json_name = "code"];</code>
@@ -1021,7 +990,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Application-specific error code or identifier for this type of violation.
-     * This can be used by clients for programmatic error handling.
      * </pre>
      *
      * <code>optional string code = 3 [json_name = "code"];</code>
@@ -1033,9 +1001,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          code_ = s;
-        }
+        code_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -1044,7 +1010,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Application-specific error code or identifier for this type of violation.
-     * This can be used by clients for programmatic error handling.
      * </pre>
      *
      * <code>optional string code = 3 [json_name = "code"];</code>
@@ -1066,7 +1031,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Application-specific error code or identifier for this type of violation.
-     * This can be used by clients for programmatic error handling.
      * </pre>
      *
      * <code>optional string code = 3 [json_name = "code"];</code>
@@ -1084,7 +1048,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Application-specific error code or identifier for this type of violation.
-     * This can be used by clients for programmatic error handling.
      * </pre>
      *
      * <code>optional string code = 3 [json_name = "code"];</code>
@@ -1099,7 +1062,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Application-specific error code or identifier for this type of violation.
-     * This can be used by clients for programmatic error handling.
      * </pre>
      *
      * <code>optional string code = 3 [json_name = "code"];</code>
@@ -1109,6 +1071,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCodeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       code_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1130,8 +1093,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1146,8 +1107,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1162,8 +1121,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1178,8 +1135,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1201,8 +1156,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1221,8 +1174,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1243,8 +1194,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1266,8 +1215,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1286,8 +1233,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1306,8 +1251,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1327,8 +1270,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1346,8 +1287,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1365,8 +1304,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1378,8 +1315,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1394,8 +1329,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1411,8 +1344,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1424,8 +1355,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1438,8 +1367,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Structured representation of the path to the field that caused the violation.
-     * This provides more detailed information than `field_path` and can be used for
-     * more precise error handling or display.
      * </pre>
      *
      * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -1488,7 +1415,7 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  @java.lang.Deprecated public static final com.google.protobuf.Parser<FieldViolation>
+  private static final com.google.protobuf.Parser<FieldViolation>
       PARSER = new com.google.protobuf.AbstractParser<FieldViolation>() {
     @java.lang.Override
     public FieldViolation parsePartialFrom(

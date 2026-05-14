@@ -42,7 +42,6 @@ public interface FieldViolationOrBuilder extends
   /**
    * <pre>
    * Human-readable message describing the violation.
-   * This should be specific to the field and the error condition.
    * </pre>
    *
    * <code>optional string message = 2 [json_name = "message"];</code>
@@ -52,7 +51,6 @@ public interface FieldViolationOrBuilder extends
   /**
    * <pre>
    * Human-readable message describing the violation.
-   * This should be specific to the field and the error condition.
    * </pre>
    *
    * <code>optional string message = 2 [json_name = "message"];</code>
@@ -62,7 +60,6 @@ public interface FieldViolationOrBuilder extends
   /**
    * <pre>
    * Human-readable message describing the violation.
-   * This should be specific to the field and the error condition.
    * </pre>
    *
    * <code>optional string message = 2 [json_name = "message"];</code>
@@ -74,7 +71,6 @@ public interface FieldViolationOrBuilder extends
   /**
    * <pre>
    * Application-specific error code or identifier for this type of violation.
-   * This can be used by clients for programmatic error handling.
    * </pre>
    *
    * <code>optional string code = 3 [json_name = "code"];</code>
@@ -84,7 +80,6 @@ public interface FieldViolationOrBuilder extends
   /**
    * <pre>
    * Application-specific error code or identifier for this type of violation.
-   * This can be used by clients for programmatic error handling.
    * </pre>
    *
    * <code>optional string code = 3 [json_name = "code"];</code>
@@ -94,7 +89,6 @@ public interface FieldViolationOrBuilder extends
   /**
    * <pre>
    * Application-specific error code or identifier for this type of violation.
-   * This can be used by clients for programmatic error handling.
    * </pre>
    *
    * <code>optional string code = 3 [json_name = "code"];</code>
@@ -106,8 +100,6 @@ public interface FieldViolationOrBuilder extends
   /**
    * <pre>
    * Structured representation of the path to the field that caused the violation.
-   * This provides more detailed information than `field_path` and can be used for
-   * more precise error handling or display.
    * </pre>
    *
    * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -117,8 +109,6 @@ public interface FieldViolationOrBuilder extends
   /**
    * <pre>
    * Structured representation of the path to the field that caused the violation.
-   * This provides more detailed information than `field_path` and can be used for
-   * more precise error handling or display.
    * </pre>
    *
    * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -127,8 +117,6 @@ public interface FieldViolationOrBuilder extends
   /**
    * <pre>
    * Structured representation of the path to the field that caused the violation.
-   * This provides more detailed information than `field_path` and can be used for
-   * more precise error handling or display.
    * </pre>
    *
    * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -137,8 +125,6 @@ public interface FieldViolationOrBuilder extends
   /**
    * <pre>
    * Structured representation of the path to the field that caused the violation.
-   * This provides more detailed information than `field_path` and can be used for
-   * more precise error handling or display.
    * </pre>
    *
    * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>
@@ -148,8 +134,6 @@ public interface FieldViolationOrBuilder extends
   /**
    * <pre>
    * Structured representation of the path to the field that caused the violation.
-   * This provides more detailed information than `field_path` and can be used for
-   * more precise error handling or display.
    * </pre>
    *
    * <code>repeated .io.altessa.badrequest.v1.FieldPathComponent field_path_components = 4 [json_name = "fieldPathComponents"];</code>

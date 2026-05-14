@@ -60,7 +60,7 @@ public interface FieldPathComponentOrBuilder extends
    * Data type of the field.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type type = 3 [json_name = "type"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
    * @return Whether the type field is set.
    */
   boolean hasType();
@@ -69,17 +69,26 @@ public interface FieldPathComponentOrBuilder extends
    * Data type of the field.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type type = 3 [json_name = "type"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
+   * @return The enum numeric value on the wire for type.
+   */
+  int getTypeValue();
+  /**
+   * <pre>
+   * Data type of the field.
+   * </pre>
+   *
+   * <code>optional .io.altessa.badrequest.v1.FieldType type = 3 [json_name = "type"];</code>
    * @return The type.
    */
-  com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type getType();
+  io.altessa.badrequest.v1.FieldType getType();
 
   /**
    * <pre>
    * For map fields, specifies the data type of the map keys.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type map_key_type = 4 [json_name = "mapKeyType"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
    * @return Whether the mapKeyType field is set.
    */
   boolean hasMapKeyType();
@@ -88,17 +97,26 @@ public interface FieldPathComponentOrBuilder extends
    * For map fields, specifies the data type of the map keys.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type map_key_type = 4 [json_name = "mapKeyType"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
+   * @return The enum numeric value on the wire for mapKeyType.
+   */
+  int getMapKeyTypeValue();
+  /**
+   * <pre>
+   * For map fields, specifies the data type of the map keys.
+   * </pre>
+   *
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_key_type = 4 [json_name = "mapKeyType"];</code>
    * @return The mapKeyType.
    */
-  com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type getMapKeyType();
+  io.altessa.badrequest.v1.FieldType getMapKeyType();
 
   /**
    * <pre>
    * For map fields, specifies the data type of the map values.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type map_value_type = 5 [json_name = "mapValueType"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
    * @return Whether the mapValueType field is set.
    */
   boolean hasMapValueType();
@@ -107,10 +125,19 @@ public interface FieldPathComponentOrBuilder extends
    * For map fields, specifies the data type of the map values.
    * </pre>
    *
-   * <code>optional .google.protobuf.FieldDescriptorProto.Type map_value_type = 5 [json_name = "mapValueType"];</code>
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
+   * @return The enum numeric value on the wire for mapValueType.
+   */
+  int getMapValueTypeValue();
+  /**
+   * <pre>
+   * For map fields, specifies the data type of the map values.
+   * </pre>
+   *
+   * <code>optional .io.altessa.badrequest.v1.FieldType map_value_type = 5 [json_name = "mapValueType"];</code>
    * @return The mapValueType.
    */
-  com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type getMapValueType();
+  io.altessa.badrequest.v1.FieldType getMapValueType();
 
   /**
    * <pre>

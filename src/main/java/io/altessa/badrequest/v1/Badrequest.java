@@ -39,35 +39,49 @@ public final class Badrequest {
   static {
     java.lang.String[] descriptorData = {
       "\n\036badrequest/v1/badrequest.proto\022\030io.alt" +
-      "essa.badrequest.v1\032 google/protobuf/desc" +
-      "riptor.proto\"a\n\nBadRequest\022S\n\020field_viol" +
-      "ations\030\001 \003(\0132(.io.altessa.badrequest.v1." +
-      "FieldViolationR\017fieldViolations\"\277\001\n\016Fiel" +
-      "dViolation\022\035\n\nfield_path\030\001 \001(\tR\tfieldPat" +
-      "h\022\030\n\007message\030\002 \001(\tR\007message\022\022\n\004code\030\003 \001(" +
-      "\tR\004code\022`\n\025field_path_components\030\004 \003(\0132," +
-      ".io.altessa.badrequest.v1.FieldPathCompo" +
-      "nentR\023fieldPathComponents\"\201\004\n\022FieldPathC" +
-      "omponent\022\026\n\006number\030\001 \001(\005R\006number\022\022\n\004name" +
-      "\030\002 \001(\tR\004name\022>\n\004type\030\003 \001(\0162*.google.prot" +
-      "obuf.FieldDescriptorProto.TypeR\004type\022L\n\014" +
-      "map_key_type\030\004 \001(\0162*.google.protobuf.Fie" +
-      "ldDescriptorProto.TypeR\nmapKeyType\022P\n\016ma" +
-      "p_value_type\030\005 \001(\0162*.google.protobuf.Fie" +
-      "ldDescriptorProto.TypeR\014mapValueType\022\037\n\013" +
-      "is_repeated\030\006 \001(\010R\nisRepeated\022%\n\016repeate" +
-      "d_index\030\007 \001(\004R\rrepeatedIndex\022\026\n\005index\030\010 " +
-      "\001(\004H\000R\005index\022\033\n\010bool_key\030\t \001(\010H\000R\007boolKe" +
-      "y\022\031\n\007int_key\030\n \001(\003H\000R\006intKey\022\033\n\010uint_key" +
-      "\030\013 \001(\004H\000R\007uintKey\022\037\n\nstring_key\030\014 \001(\tH\000R" +
-      "\tstringKeyB\t\n\007map_keyBZ\n\030io.altessa.badr" +
-      "equest.v1P\001Z<github.com/altessa-s/proto-" +
-      "gen-go/badrequest/v1;badrequestv1"
+      "essa.badrequest.v1\"a\n\nBadRequest\022S\n\020fiel" +
+      "d_violations\030\001 \003(\0132(.io.altessa.badreque" +
+      "st.v1.FieldViolationR\017fieldViolations\"\362\001" +
+      "\n\016FieldViolation\022\"\n\nfield_path\030\001 \001(\tH\000R\t" +
+      "fieldPath\210\001\001\022\035\n\007message\030\002 \001(\tH\001R\007message" +
+      "\210\001\001\022\027\n\004code\030\003 \001(\tH\002R\004code\210\001\001\022`\n\025field_pa" +
+      "th_components\030\004 \003(\0132,.io.altessa.badrequ" +
+      "est.v1.FieldPathComponentR\023fieldPathComp" +
+      "onentsB\r\n\013_field_pathB\n\n\010_messageB\007\n\005_co" +
+      "de\"\363\004\n\022FieldPathComponent\022\033\n\006number\030\001 \001(" +
+      "\005H\001R\006number\210\001\001\022\027\n\004name\030\002 \001(\tH\002R\004name\210\001\001\022" +
+      "<\n\004type\030\003 \001(\0162#.io.altessa.badrequest.v1" +
+      ".FieldTypeH\003R\004type\210\001\001\022J\n\014map_key_type\030\004 " +
+      "\001(\0162#.io.altessa.badrequest.v1.FieldType" +
+      "H\004R\nmapKeyType\210\001\001\022N\n\016map_value_type\030\005 \001(" +
+      "\0162#.io.altessa.badrequest.v1.FieldTypeH\005" +
+      "R\014mapValueType\210\001\001\022$\n\013is_repeated\030\006 \001(\010H\006" +
+      "R\nisRepeated\210\001\001\022*\n\016repeated_index\030\007 \001(\004H" +
+      "\007R\rrepeatedIndex\210\001\001\022\026\n\005index\030\010 \001(\004H\000R\005in" +
+      "dex\022\033\n\010bool_key\030\t \001(\010H\000R\007boolKey\022\031\n\007int_" +
+      "key\030\n \001(\003H\000R\006intKey\022\033\n\010uint_key\030\013 \001(\004H\000R" +
+      "\007uintKey\022\037\n\nstring_key\030\014 \001(\tH\000R\tstringKe" +
+      "yB\t\n\007map_keyB\t\n\007_numberB\007\n\005_nameB\007\n\005_typ" +
+      "eB\017\n\r_map_key_typeB\021\n\017_map_value_typeB\016\n" +
+      "\014_is_repeatedB\021\n\017_repeated_index*\303\003\n\tFie" +
+      "ldType\022\032\n\026FIELD_TYPE_UNSPECIFIED\020\000\022\025\n\021FI" +
+      "ELD_TYPE_DOUBLE\020\001\022\024\n\020FIELD_TYPE_FLOAT\020\002\022" +
+      "\024\n\020FIELD_TYPE_INT64\020\003\022\025\n\021FIELD_TYPE_UINT" +
+      "64\020\004\022\024\n\020FIELD_TYPE_INT32\020\005\022\026\n\022FIELD_TYPE" +
+      "_FIXED64\020\006\022\026\n\022FIELD_TYPE_FIXED32\020\007\022\023\n\017FI" +
+      "ELD_TYPE_BOOL\020\010\022\025\n\021FIELD_TYPE_STRING\020\t\022\024" +
+      "\n\020FIELD_TYPE_GROUP\020\n\022\026\n\022FIELD_TYPE_MESSA" +
+      "GE\020\013\022\024\n\020FIELD_TYPE_BYTES\020\014\022\025\n\021FIELD_TYPE" +
+      "_UINT32\020\r\022\023\n\017FIELD_TYPE_ENUM\020\016\022\027\n\023FIELD_" +
+      "TYPE_SFIXED32\020\017\022\027\n\023FIELD_TYPE_SFIXED64\020\020" +
+      "\022\025\n\021FIELD_TYPE_SINT32\020\021\022\025\n\021FIELD_TYPE_SI" +
+      "NT64\020\022BZ\n\030io.altessa.badrequest.v1P\001Z<gi" +
+      "thub.com/altessa-s/proto-gen-go/badreque" +
+      "st/v1;badrequestv1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.DescriptorProtos.getDescriptor(),
         });
     internal_static_io_altessa_badrequest_v1_BadRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -80,14 +94,13 @@ public final class Badrequest {
     internal_static_io_altessa_badrequest_v1_FieldViolation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_altessa_badrequest_v1_FieldViolation_descriptor,
-        new java.lang.String[] { "FieldPath", "Message", "Code", "FieldPathComponents", });
+        new java.lang.String[] { "FieldPath", "Message", "Code", "FieldPathComponents", "FieldPath", "Message", "Code", });
     internal_static_io_altessa_badrequest_v1_FieldPathComponent_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_io_altessa_badrequest_v1_FieldPathComponent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_altessa_badrequest_v1_FieldPathComponent_descriptor,
-        new java.lang.String[] { "Number", "Name", "Type", "MapKeyType", "MapValueType", "IsRepeated", "RepeatedIndex", "Index", "BoolKey", "IntKey", "UintKey", "StringKey", "MapKey", });
-    com.google.protobuf.DescriptorProtos.getDescriptor();
+        new java.lang.String[] { "Number", "Name", "Type", "MapKeyType", "MapValueType", "IsRepeated", "RepeatedIndex", "Index", "BoolKey", "IntKey", "UintKey", "StringKey", "MapKey", "Number", "Name", "Type", "MapKeyType", "MapValueType", "IsRepeated", "RepeatedIndex", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

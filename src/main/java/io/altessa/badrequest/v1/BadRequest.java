@@ -462,7 +462,7 @@ private static final long serialVersionUID = 0L;
             case 10: {
               io.altessa.badrequest.v1.FieldViolation m =
                   input.readMessage(
-                      io.altessa.badrequest.v1.FieldViolation.PARSER,
+                      io.altessa.badrequest.v1.FieldViolation.parser(),
                       extensionRegistry);
               if (fieldViolationsBuilder_ == null) {
                 ensureFieldViolationsIsMutable();
@@ -826,7 +826,7 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  @java.lang.Deprecated public static final com.google.protobuf.Parser<BadRequest>
+  private static final com.google.protobuf.Parser<BadRequest>
       PARSER = new com.google.protobuf.AbstractParser<BadRequest>() {
     @java.lang.Override
     public BadRequest parsePartialFrom(
