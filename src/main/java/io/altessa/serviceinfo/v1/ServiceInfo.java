@@ -29,7 +29,6 @@ private static final long serialVersionUID = 0L;
     branch_ = "";
     commit_ = "";
     buildTags_ = "";
-    protoVersion_ = "";
     leaderId_ = "";
     startTime_ = "";
   }
@@ -1593,65 +1592,6 @@ java.lang.String defaultValue) {
     return map.get(key);
   }
 
-  public static final int PROTO_VERSION_FIELD_NUMBER = 12;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object protoVersion_ = "";
-  /**
-   * <pre>
-   * Version of the Protobuf package or definitions that this service was compiled against.
-   * </pre>
-   *
-   * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-   * @return Whether the protoVersion field is set.
-   */
-  @java.lang.Override
-  public boolean hasProtoVersion() {
-    return ((bitField0_ & 0x00000020) != 0);
-  }
-  /**
-   * <pre>
-   * Version of the Protobuf package or definitions that this service was compiled against.
-   * </pre>
-   *
-   * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-   * @return The protoVersion.
-   */
-  @java.lang.Override
-  public java.lang.String getProtoVersion() {
-    java.lang.Object ref = protoVersion_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      protoVersion_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Version of the Protobuf package or definitions that this service was compiled against.
-   * </pre>
-   *
-   * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-   * @return The bytes for protoVersion.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getProtoVersionBytes() {
-    java.lang.Object ref = protoVersion_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      protoVersion_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   public static final int LEADER_ID_FIELD_NUMBER = 13;
   @SuppressWarnings("serial")
   private volatile java.lang.Object leaderId_ = "";
@@ -1666,7 +1606,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasLeaderId() {
-    return ((bitField0_ & 0x00000040) != 0);
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -1728,7 +1668,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasStartTime() {
-    return ((bitField0_ & 0x00000080) != 0);
+    return ((bitField0_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -1789,7 +1729,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasUptime() {
-    return ((bitField0_ & 0x00000100) != 0);
+    return ((bitField0_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -1856,15 +1796,12 @@ java.lang.String defaultValue) {
         MetadataDefaultEntryHolder.defaultEntry,
         11);
     if (((bitField0_ & 0x00000020) != 0)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, protoVersion_);
-    }
-    if (((bitField0_ & 0x00000040) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, leaderId_);
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, startTime_);
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       output.writeUInt64(15, uptime_);
     }
     getUnknownFields().writeTo(output);
@@ -1919,15 +1856,12 @@ java.lang.String defaultValue) {
           .computeMessageSize(11, metadata__);
     }
     if (((bitField0_ & 0x00000020) != 0)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, protoVersion_);
-    }
-    if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, leaderId_);
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, startTime_);
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(15, uptime_);
     }
@@ -1986,11 +1920,6 @@ java.lang.String defaultValue) {
     }
     if (!internalGetMetadata().equals(
         other.internalGetMetadata())) return false;
-    if (hasProtoVersion() != other.hasProtoVersion()) return false;
-    if (hasProtoVersion()) {
-      if (!getProtoVersion()
-          .equals(other.getProtoVersion())) return false;
-    }
     if (hasLeaderId() != other.hasLeaderId()) return false;
     if (hasLeaderId()) {
       if (!getLeaderId()
@@ -2053,10 +1982,6 @@ java.lang.String defaultValue) {
     if (!internalGetMetadata().getMap().isEmpty()) {
       hash = (37 * hash) + METADATA_FIELD_NUMBER;
       hash = (53 * hash) + internalGetMetadata().hashCode();
-    }
-    if (hasProtoVersion()) {
-      hash = (37 * hash) + PROTO_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getProtoVersion().hashCode();
     }
     if (hasLeaderId()) {
       hash = (37 * hash) + LEADER_ID_FIELD_NUMBER;
@@ -2242,7 +2167,6 @@ java.lang.String defaultValue) {
       commit_ = "";
       buildTags_ = "";
       internalGetMutableMetadata().clear();
-      protoVersion_ = "";
       leaderId_ = "";
       startTime_ = "";
       uptime_ = 0L;
@@ -2322,20 +2246,16 @@ java.lang.String defaultValue) {
         result.metadata_.makeImmutable();
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.protoVersion_ = protoVersion_;
+        result.leaderId_ = leaderId_;
         to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.leaderId_ = leaderId_;
+        result.startTime_ = startTime_;
         to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
-        result.startTime_ = startTime_;
-        to_bitField0_ |= 0x00000080;
-      }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
         result.uptime_ = uptime_;
-        to_bitField0_ |= 0x00000100;
+        to_bitField0_ |= 0x00000080;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -2433,19 +2353,14 @@ java.lang.String defaultValue) {
       internalGetMutableMetadata().mergeFrom(
           other.internalGetMetadata());
       bitField0_ |= 0x00000400;
-      if (other.hasProtoVersion()) {
-        protoVersion_ = other.protoVersion_;
-        bitField0_ |= 0x00000800;
-        onChanged();
-      }
       if (other.hasLeaderId()) {
         leaderId_ = other.leaderId_;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       if (other.hasStartTime()) {
         startTime_ = other.startTime_;
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00001000;
         onChanged();
       }
       if (other.hasUptime()) {
@@ -2538,24 +2453,19 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000400;
               break;
             } // case 90
-            case 98: {
-              protoVersion_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 98
             case 106: {
               leaderId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00000800;
               break;
             } // case 106
             case 114: {
               startTime_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00001000;
               break;
             } // case 114
             case 120: {
               uptime_ = input.readUInt64();
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00002000;
               break;
             } // case 120
             default: {
@@ -3740,109 +3650,6 @@ java.lang.String defaultValue) {
       return this;
     }
 
-    private java.lang.Object protoVersion_ = "";
-    /**
-     * <pre>
-     * Version of the Protobuf package or definitions that this service was compiled against.
-     * </pre>
-     *
-     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-     * @return Whether the protoVersion field is set.
-     */
-    public boolean hasProtoVersion() {
-      return ((bitField0_ & 0x00000800) != 0);
-    }
-    /**
-     * <pre>
-     * Version of the Protobuf package or definitions that this service was compiled against.
-     * </pre>
-     *
-     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-     * @return The protoVersion.
-     */
-    public java.lang.String getProtoVersion() {
-      java.lang.Object ref = protoVersion_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        protoVersion_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Version of the Protobuf package or definitions that this service was compiled against.
-     * </pre>
-     *
-     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-     * @return The bytes for protoVersion.
-     */
-    public com.google.protobuf.ByteString
-        getProtoVersionBytes() {
-      java.lang.Object ref = protoVersion_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        protoVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Version of the Protobuf package or definitions that this service was compiled against.
-     * </pre>
-     *
-     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-     * @param value The protoVersion to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProtoVersion(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      protoVersion_ = value;
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Version of the Protobuf package or definitions that this service was compiled against.
-     * </pre>
-     *
-     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearProtoVersion() {
-      protoVersion_ = getDefaultInstance().getProtoVersion();
-      bitField0_ = (bitField0_ & ~0x00000800);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Version of the Protobuf package or definitions that this service was compiled against.
-     * </pre>
-     *
-     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-     * @param value The bytes for protoVersion to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProtoVersionBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      protoVersion_ = value;
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object leaderId_ = "";
     /**
      * <pre>
@@ -3854,7 +3661,7 @@ java.lang.String defaultValue) {
      * @return Whether the leaderId field is set.
      */
     public boolean hasLeaderId() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -3913,7 +3720,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       leaderId_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3928,7 +3735,7 @@ java.lang.String defaultValue) {
      */
     public Builder clearLeaderId() {
       leaderId_ = getDefaultInstance().getLeaderId();
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -3947,7 +3754,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       leaderId_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3963,7 +3770,7 @@ java.lang.String defaultValue) {
      * @return Whether the startTime field is set.
      */
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00002000) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -4022,7 +3829,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       startTime_ = value;
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -4037,7 +3844,7 @@ java.lang.String defaultValue) {
      */
     public Builder clearStartTime() {
       startTime_ = getDefaultInstance().getStartTime();
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -4056,7 +3863,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       startTime_ = value;
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -4073,7 +3880,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Override
     public boolean hasUptime() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -4101,7 +3908,7 @@ java.lang.String defaultValue) {
     public Builder setUptime(long value) {
       
       uptime_ = value;
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -4115,7 +3922,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearUptime() {
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       uptime_ = 0L;
       onChanged();
       return this;

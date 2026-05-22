@@ -39,7 +39,7 @@ public final class Serviceinfo {
   static {
     java.lang.String[] descriptorData = {
       "\n serviceinfo/v1/serviceinfo.proto\022\031io.a" +
-      "ltessa.serviceinfo.v1\"\330\007\n\013ServiceInfo\022!\n" +
+      "ltessa.serviceinfo.v1\"\242\007\n\013ServiceInfo\022!\n" +
       "\014service_name\030\001 \001(\tR\013serviceName\0224\n\023serv" +
       "ice_description\030\002 \001(\tH\000R\022serviceDescript" +
       "ion\210\001\001\022\"\n\nservice_id\030\003 \001(\tH\001R\tserviceId\210" +
@@ -52,21 +52,20 @@ public final class Serviceinfo {
       "\tH\003R\006commit\210\001\001\022\"\n\nbuild_tags\030\n \001(\tH\004R\tbu" +
       "ildTags\210\001\001\022P\n\010metadata\030\013 \003(\01324.io.altess" +
       "a.serviceinfo.v1.ServiceInfo.MetadataEnt" +
-      "ryR\010metadata\022(\n\rproto_version\030\014 \001(\tH\005R\014p" +
-      "rotoVersion\210\001\001\022 \n\tleader_id\030\r \001(\tH\006R\010lea" +
-      "derId\210\001\001\022\"\n\nstart_time\030\016 \001(\tH\007R\tstartTim" +
-      "e\210\001\001\022\033\n\006uptime\030\017 \001(\004H\010R\006uptime\210\001\001\032\211\001\n\017Se" +
-      "manticVersion\022\024\n\005major\030\001 \001(\rR\005major\022\024\n\005m" +
-      "inor\030\002 \001(\rR\005minor\022\024\n\005patch\030\003 \001(\rR\005patch\022" +
-      "$\n\013pre_release\030\004 \001(\tH\000R\npreRelease\210\001\001B\016\n" +
-      "\014_pre_release\032;\n\rMetadataEntry\022\020\n\003key\030\001 " +
-      "\001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001B\026\n\024_s" +
-      "ervice_descriptionB\r\n\013_service_idB\t\n\007_br" +
-      "anchB\t\n\007_commitB\r\n\013_build_tagsB\020\n\016_proto" +
-      "_versionB\014\n\n_leader_idB\r\n\013_start_timeB\t\n" +
-      "\007_uptimeB]\n\031io.altessa.serviceinfo.v1P\001Z" +
-      ">github.com/altessa-s/proto-gen-go/servi" +
-      "ceinfo/v1;serviceinfov1b\006proto3"
+      "ryR\010metadata\022 \n\tleader_id\030\r \001(\tH\005R\010leade" +
+      "rId\210\001\001\022\"\n\nstart_time\030\016 \001(\tH\006R\tstartTime\210" +
+      "\001\001\022\033\n\006uptime\030\017 \001(\004H\007R\006uptime\210\001\001\032\211\001\n\017Sema" +
+      "nticVersion\022\024\n\005major\030\001 \001(\rR\005major\022\024\n\005min" +
+      "or\030\002 \001(\rR\005minor\022\024\n\005patch\030\003 \001(\rR\005patch\022$\n" +
+      "\013pre_release\030\004 \001(\tH\000R\npreRelease\210\001\001B\016\n\014_" +
+      "pre_release\032;\n\rMetadataEntry\022\020\n\003key\030\001 \001(" +
+      "\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001B\026\n\024_ser" +
+      "vice_descriptionB\r\n\013_service_idB\t\n\007_bran" +
+      "chB\t\n\007_commitB\r\n\013_build_tagsB\014\n\n_leader_" +
+      "idB\r\n\013_start_timeB\t\n\007_uptimeJ\004\010\014\020\rB]\n\031io" +
+      ".altessa.serviceinfo.v1P\001Z>github.com/al" +
+      "tessa-s/proto-gen-go/serviceinfo/v1;serv" +
+      "iceinfov1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -77,7 +76,7 @@ public final class Serviceinfo {
     internal_static_io_altessa_serviceinfo_v1_ServiceInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_altessa_serviceinfo_v1_ServiceInfo_descriptor,
-        new java.lang.String[] { "ServiceName", "ServiceDescription", "ServiceId", "IsLeader", "FullVersion", "SemanticVersion", "BuildTime", "Branch", "Commit", "BuildTags", "Metadata", "ProtoVersion", "LeaderId", "StartTime", "Uptime", "ServiceDescription", "ServiceId", "Branch", "Commit", "BuildTags", "ProtoVersion", "LeaderId", "StartTime", "Uptime", });
+        new java.lang.String[] { "ServiceName", "ServiceDescription", "ServiceId", "IsLeader", "FullVersion", "SemanticVersion", "BuildTime", "Branch", "Commit", "BuildTags", "Metadata", "LeaderId", "StartTime", "Uptime", "ServiceDescription", "ServiceId", "Branch", "Commit", "BuildTags", "LeaderId", "StartTime", "Uptime", });
     internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_descriptor =
       internal_static_io_altessa_serviceinfo_v1_ServiceInfo_descriptor.getNestedTypes().get(0);
     internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_fieldAccessorTable = new
