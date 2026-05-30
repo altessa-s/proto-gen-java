@@ -1,15 +1,20 @@
 name: Publish
 
 on:
+  # Release publishes come via repository_dispatch from altessa-s/proto's
+  # proto-publish.yml on tag push. The `push: tags` trigger was deliberately
+  # omitted to avoid a duplicate run racing with the dispatch (GitHub Packages
+  # returns 409 on the second PUT of the same coordinates). The `push:
+  # branches: develop` trigger is safe because it publishes a per-commit
+  # SNAPSHOT under unique coordinates.
+  push:
+    branches: [develop]
   repository_dispatch:
     types: [publish-jar]
-  push:
-    tags:
-      - "v*"
   workflow_dispatch:
     inputs:
       version:
-        description: "Version to publish (e.g. 1.2.3). Leave blank to use git tag."
+        description: "Version to publish (e.g. 1.2.3). Leave blank to use git tag or develop SNAPSHOT."
         required: false
         type: string
 
@@ -42,6 +47,7 @@ jobs:
           INPUT_VERSION: ${{ inputs.version }}
           REF_TYPE: ${{ github.ref_type }}
           REF_NAME: ${{ github.ref_name }}
+          GITHUB_SHA: ${{ github.sha }}
         run: |
           if [[ -n "${DISPATCH_VERSION}" ]]; then
             echo "version=${DISPATCH_VERSION#v}" >> "$GITHUB_OUTPUT"
@@ -49,6 +55,10 @@ jobs:
             echo "version=${INPUT_VERSION#v}" >> "$GITHUB_OUTPUT"
           elif [[ "${REF_TYPE}" == "tag" ]]; then
             echo "version=${REF_NAME#v}" >> "$GITHUB_OUTPUT"
+          elif [[ "${REF_TYPE}" == "branch" && "${REF_NAME}" == "develop" ]]; then
+            BASE_VERSION=$(git describe --tags --abbrev=0 2>/dev/null | sed 's/^v//' || echo "0.0.0")
+            SHORT_SHA=${GITHUB_SHA:0:7}
+            echo "version=${BASE_VERSION}-${SHORT_SHA}-SNAPSHOT" >> "$GITHUB_OUTPUT"
           else
             echo "error: no version source available" >&2
             exit 1
