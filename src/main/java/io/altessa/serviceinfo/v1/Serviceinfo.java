@@ -3,94 +3,4184 @@
 
 package io.altessa.serviceinfo.v1;
 
-public final class Serviceinfo {
-  private Serviceinfo() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+/**
+ * <pre>
+ * Defines detailed information about a running service instance.
+ * It includes identification, versioning, build details, leadership status, and other metadata.
+ * </pre>
+ *
+ * Protobuf type {@code io.altessa.serviceinfo.v1.ServiceInfo}
+ */
+public final class ServiceInfo extends
+    com.google.protobuf.GeneratedMessageV3 implements
+    // @@protoc_insertion_point(message_implements:io.altessa.serviceinfo.v1.ServiceInfo)
+    ServiceInfoOrBuilder {
+private static final long serialVersionUID = 0L;
+  // Use ServiceInfo.newBuilder() to construct.
+  private ServiceInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    super(builder);
+  }
+  private ServiceInfo() {
+    serviceName_ = "";
+    serviceDescription_ = "";
+    serviceId_ = "";
+    fullVersion_ = "";
+    buildTime_ = "";
+    branch_ = "";
+    commit_ = "";
+    buildTags_ = "";
+    protoVersion_ = "";
+    leaderId_ = "";
+    startTime_ = "";
   }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ServiceInfo();
   }
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_io_altessa_serviceinfo_v1_ServiceInfo_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_io_altessa_serviceinfo_v1_ServiceInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_io_altessa_serviceinfo_v1_ServiceInfo_MetadataEntry_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_io_altessa_serviceinfo_v1_ServiceInfo_MetadataEntry_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n serviceinfo/v1/serviceinfo.proto\022\031io.a" +
-      "ltessa.serviceinfo.v1\"\330\007\n\013ServiceInfo\022!\n" +
-      "\014service_name\030\001 \001(\tR\013serviceName\0224\n\023serv" +
-      "ice_description\030\002 \001(\tH\000R\022serviceDescript" +
-      "ion\210\001\001\022\"\n\nservice_id\030\003 \001(\tH\001R\tserviceId\210" +
-      "\001\001\022\033\n\tis_leader\030\004 \001(\010R\010isLeader\022!\n\014full_" +
-      "version\030\005 \001(\tR\013fullVersion\022a\n\020semantic_v" +
-      "ersion\030\006 \001(\01326.io.altessa.serviceinfo.v1" +
-      ".ServiceInfo.SemanticVersionR\017semanticVe" +
-      "rsion\022\035\n\nbuild_time\030\007 \001(\tR\tbuildTime\022\033\n\006" +
-      "branch\030\010 \001(\tH\002R\006branch\210\001\001\022\033\n\006commit\030\t \001(" +
-      "\tH\003R\006commit\210\001\001\022\"\n\nbuild_tags\030\n \001(\tH\004R\tbu" +
-      "ildTags\210\001\001\022P\n\010metadata\030\013 \003(\01324.io.altess" +
-      "a.serviceinfo.v1.ServiceInfo.MetadataEnt" +
-      "ryR\010metadata\022(\n\rproto_version\030\014 \001(\tH\005R\014p" +
-      "rotoVersion\210\001\001\022 \n\tleader_id\030\r \001(\tH\006R\010lea" +
-      "derId\210\001\001\022\"\n\nstart_time\030\016 \001(\tH\007R\tstartTim" +
-      "e\210\001\001\022\033\n\006uptime\030\017 \001(\004H\010R\006uptime\210\001\001\032\211\001\n\017Se" +
-      "manticVersion\022\024\n\005major\030\001 \001(\rR\005major\022\024\n\005m" +
-      "inor\030\002 \001(\rR\005minor\022\024\n\005patch\030\003 \001(\rR\005patch\022" +
-      "$\n\013pre_release\030\004 \001(\tH\000R\npreRelease\210\001\001B\016\n" +
-      "\014_pre_release\032;\n\rMetadataEntry\022\020\n\003key\030\001 " +
-      "\001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001B\026\n\024_s" +
-      "ervice_descriptionB\r\n\013_service_idB\t\n\007_br" +
-      "anchB\t\n\007_commitB\r\n\013_build_tagsB\020\n\016_proto" +
-      "_versionB\014\n\n_leader_idB\r\n\013_start_timeB\t\n" +
-      "\007_uptimeB]\n\031io.altessa.serviceinfo.v1P\001Z" +
-      ">github.com/altessa-s/proto-gen-go/servi" +
-      "ceinfo/v1;serviceinfov1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
-    internal_static_io_altessa_serviceinfo_v1_ServiceInfo_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_io_altessa_serviceinfo_v1_ServiceInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_io_altessa_serviceinfo_v1_ServiceInfo_descriptor,
-        new java.lang.String[] { "ServiceName", "ServiceDescription", "ServiceId", "IsLeader", "FullVersion", "SemanticVersion", "BuildTime", "Branch", "Commit", "BuildTags", "Metadata", "ProtoVersion", "LeaderId", "StartTime", "Uptime", "ServiceDescription", "ServiceId", "Branch", "Commit", "BuildTags", "ProtoVersion", "LeaderId", "StartTime", "Uptime", });
-    internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_descriptor =
-      internal_static_io_altessa_serviceinfo_v1_ServiceInfo_descriptor.getNestedTypes().get(0);
-    internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_descriptor,
-        new java.lang.String[] { "Major", "Minor", "Patch", "PreRelease", "PreRelease", });
-    internal_static_io_altessa_serviceinfo_v1_ServiceInfo_MetadataEntry_descriptor =
-      internal_static_io_altessa_serviceinfo_v1_ServiceInfo_descriptor.getNestedTypes().get(1);
-    internal_static_io_altessa_serviceinfo_v1_ServiceInfo_MetadataEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_io_altessa_serviceinfo_v1_ServiceInfo_MetadataEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+    return io.altessa.serviceinfo.v1.Serviceinfo.internal_static_io_altessa_serviceinfo_v1_ServiceInfo_descriptor;
   }
 
-  // @@protoc_insertion_point(outer_class_scope)
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 11:
+        return internalGetMetadata();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
+  @java.lang.Override
+  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+    return io.altessa.serviceinfo.v1.Serviceinfo.internal_static_io_altessa_serviceinfo_v1_ServiceInfo_fieldAccessorTable
+        .ensureFieldAccessorsInitialized(
+            io.altessa.serviceinfo.v1.ServiceInfo.class, io.altessa.serviceinfo.v1.ServiceInfo.Builder.class);
+  }
+
+  public interface SemanticVersionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The MAJOR version, incremented for incompatible API changes.
+     * </pre>
+     *
+     * <code>uint32 major = 1 [json_name = "major"];</code>
+     * @return The major.
+     */
+    int getMajor();
+
+    /**
+     * <pre>
+     * The MINOR version, incremented for adding functionality in a backward-compatible manner.
+     * </pre>
+     *
+     * <code>uint32 minor = 2 [json_name = "minor"];</code>
+     * @return The minor.
+     */
+    int getMinor();
+
+    /**
+     * <pre>
+     * The PATCH version, incremented for backward-compatible bug fixes.
+     * </pre>
+     *
+     * <code>uint32 patch = 3 [json_name = "patch"];</code>
+     * @return The patch.
+     */
+    int getPatch();
+
+    /**
+     * <pre>
+     * Pre-release identifier (e.g., "alpha", "beta.1").
+     * A series of dot-separated identifiers immediately following the patch version.
+     * </pre>
+     *
+     * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+     * @return Whether the preRelease field is set.
+     */
+    boolean hasPreRelease();
+    /**
+     * <pre>
+     * Pre-release identifier (e.g., "alpha", "beta.1").
+     * A series of dot-separated identifiers immediately following the patch version.
+     * </pre>
+     *
+     * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+     * @return The preRelease.
+     */
+    java.lang.String getPreRelease();
+    /**
+     * <pre>
+     * Pre-release identifier (e.g., "alpha", "beta.1").
+     * A series of dot-separated identifiers immediately following the patch version.
+     * </pre>
+     *
+     * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+     * @return The bytes for preRelease.
+     */
+    com.google.protobuf.ByteString
+        getPreReleaseBytes();
+  }
+  /**
+   * <pre>
+   * Defines a version conforming to the Semantic Versioning 2.0.0 specification (semver.org).
+   * </pre>
+   *
+   * Protobuf type {@code io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion}
+   */
+  public static final class SemanticVersion extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion)
+      SemanticVersionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SemanticVersion.newBuilder() to construct.
+    private SemanticVersion(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SemanticVersion() {
+      preRelease_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SemanticVersion();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.altessa.serviceinfo.v1.Serviceinfo.internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.altessa.serviceinfo.v1.Serviceinfo.internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.class, io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int MAJOR_FIELD_NUMBER = 1;
+    private int major_ = 0;
+    /**
+     * <pre>
+     * The MAJOR version, incremented for incompatible API changes.
+     * </pre>
+     *
+     * <code>uint32 major = 1 [json_name = "major"];</code>
+     * @return The major.
+     */
+    @java.lang.Override
+    public int getMajor() {
+      return major_;
+    }
+
+    public static final int MINOR_FIELD_NUMBER = 2;
+    private int minor_ = 0;
+    /**
+     * <pre>
+     * The MINOR version, incremented for adding functionality in a backward-compatible manner.
+     * </pre>
+     *
+     * <code>uint32 minor = 2 [json_name = "minor"];</code>
+     * @return The minor.
+     */
+    @java.lang.Override
+    public int getMinor() {
+      return minor_;
+    }
+
+    public static final int PATCH_FIELD_NUMBER = 3;
+    private int patch_ = 0;
+    /**
+     * <pre>
+     * The PATCH version, incremented for backward-compatible bug fixes.
+     * </pre>
+     *
+     * <code>uint32 patch = 3 [json_name = "patch"];</code>
+     * @return The patch.
+     */
+    @java.lang.Override
+    public int getPatch() {
+      return patch_;
+    }
+
+    public static final int PRE_RELEASE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object preRelease_ = "";
+    /**
+     * <pre>
+     * Pre-release identifier (e.g., "alpha", "beta.1").
+     * A series of dot-separated identifiers immediately following the patch version.
+     * </pre>
+     *
+     * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+     * @return Whether the preRelease field is set.
+     */
+    @java.lang.Override
+    public boolean hasPreRelease() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Pre-release identifier (e.g., "alpha", "beta.1").
+     * A series of dot-separated identifiers immediately following the patch version.
+     * </pre>
+     *
+     * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+     * @return The preRelease.
+     */
+    @java.lang.Override
+    public java.lang.String getPreRelease() {
+      java.lang.Object ref = preRelease_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        preRelease_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Pre-release identifier (e.g., "alpha", "beta.1").
+     * A series of dot-separated identifiers immediately following the patch version.
+     * </pre>
+     *
+     * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+     * @return The bytes for preRelease.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPreReleaseBytes() {
+      java.lang.Object ref = preRelease_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        preRelease_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (major_ != 0) {
+        output.writeUInt32(1, major_);
+      }
+      if (minor_ != 0) {
+        output.writeUInt32(2, minor_);
+      }
+      if (patch_ != 0) {
+        output.writeUInt32(3, patch_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, preRelease_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (major_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, major_);
+      }
+      if (minor_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, minor_);
+      }
+      if (patch_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, patch_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, preRelease_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion)) {
+        return super.equals(obj);
+      }
+      io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion other = (io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion) obj;
+
+      if (getMajor()
+          != other.getMajor()) return false;
+      if (getMinor()
+          != other.getMinor()) return false;
+      if (getPatch()
+          != other.getPatch()) return false;
+      if (hasPreRelease() != other.hasPreRelease()) return false;
+      if (hasPreRelease()) {
+        if (!getPreRelease()
+            .equals(other.getPreRelease())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MAJOR_FIELD_NUMBER;
+      hash = (53 * hash) + getMajor();
+      hash = (37 * hash) + MINOR_FIELD_NUMBER;
+      hash = (53 * hash) + getMinor();
+      hash = (37 * hash) + PATCH_FIELD_NUMBER;
+      hash = (53 * hash) + getPatch();
+      if (hasPreRelease()) {
+        hash = (37 * hash) + PRE_RELEASE_FIELD_NUMBER;
+        hash = (53 * hash) + getPreRelease().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Defines a version conforming to the Semantic Versioning 2.0.0 specification (semver.org).
+     * </pre>
+     *
+     * Protobuf type {@code io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion)
+        io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.altessa.serviceinfo.v1.Serviceinfo.internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.altessa.serviceinfo.v1.Serviceinfo.internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.class, io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.Builder.class);
+      }
+
+      // Construct using io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        major_ = 0;
+        minor_ = 0;
+        patch_ = 0;
+        preRelease_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.altessa.serviceinfo.v1.Serviceinfo.internal_static_io_altessa_serviceinfo_v1_ServiceInfo_SemanticVersion_descriptor;
+      }
+
+      @java.lang.Override
+      public io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion getDefaultInstanceForType() {
+        return io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion build() {
+        io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion buildPartial() {
+        io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion result = new io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.major_ = major_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.minor_ = minor_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.patch_ = patch_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.preRelease_ = preRelease_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion) {
+          return mergeFrom((io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion other) {
+        if (other == io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.getDefaultInstance()) return this;
+        if (other.getMajor() != 0) {
+          setMajor(other.getMajor());
+        }
+        if (other.getMinor() != 0) {
+          setMinor(other.getMinor());
+        }
+        if (other.getPatch() != 0) {
+          setPatch(other.getPatch());
+        }
+        if (other.hasPreRelease()) {
+          preRelease_ = other.preRelease_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                major_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                minor_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                patch_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                preRelease_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int major_ ;
+      /**
+       * <pre>
+       * The MAJOR version, incremented for incompatible API changes.
+       * </pre>
+       *
+       * <code>uint32 major = 1 [json_name = "major"];</code>
+       * @return The major.
+       */
+      @java.lang.Override
+      public int getMajor() {
+        return major_;
+      }
+      /**
+       * <pre>
+       * The MAJOR version, incremented for incompatible API changes.
+       * </pre>
+       *
+       * <code>uint32 major = 1 [json_name = "major"];</code>
+       * @param value The major to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMajor(int value) {
+        
+        major_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The MAJOR version, incremented for incompatible API changes.
+       * </pre>
+       *
+       * <code>uint32 major = 1 [json_name = "major"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMajor() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        major_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int minor_ ;
+      /**
+       * <pre>
+       * The MINOR version, incremented for adding functionality in a backward-compatible manner.
+       * </pre>
+       *
+       * <code>uint32 minor = 2 [json_name = "minor"];</code>
+       * @return The minor.
+       */
+      @java.lang.Override
+      public int getMinor() {
+        return minor_;
+      }
+      /**
+       * <pre>
+       * The MINOR version, incremented for adding functionality in a backward-compatible manner.
+       * </pre>
+       *
+       * <code>uint32 minor = 2 [json_name = "minor"];</code>
+       * @param value The minor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinor(int value) {
+        
+        minor_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The MINOR version, incremented for adding functionality in a backward-compatible manner.
+       * </pre>
+       *
+       * <code>uint32 minor = 2 [json_name = "minor"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinor() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        minor_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int patch_ ;
+      /**
+       * <pre>
+       * The PATCH version, incremented for backward-compatible bug fixes.
+       * </pre>
+       *
+       * <code>uint32 patch = 3 [json_name = "patch"];</code>
+       * @return The patch.
+       */
+      @java.lang.Override
+      public int getPatch() {
+        return patch_;
+      }
+      /**
+       * <pre>
+       * The PATCH version, incremented for backward-compatible bug fixes.
+       * </pre>
+       *
+       * <code>uint32 patch = 3 [json_name = "patch"];</code>
+       * @param value The patch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPatch(int value) {
+        
+        patch_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The PATCH version, incremented for backward-compatible bug fixes.
+       * </pre>
+       *
+       * <code>uint32 patch = 3 [json_name = "patch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPatch() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        patch_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object preRelease_ = "";
+      /**
+       * <pre>
+       * Pre-release identifier (e.g., "alpha", "beta.1").
+       * A series of dot-separated identifiers immediately following the patch version.
+       * </pre>
+       *
+       * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+       * @return Whether the preRelease field is set.
+       */
+      public boolean hasPreRelease() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Pre-release identifier (e.g., "alpha", "beta.1").
+       * A series of dot-separated identifiers immediately following the patch version.
+       * </pre>
+       *
+       * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+       * @return The preRelease.
+       */
+      public java.lang.String getPreRelease() {
+        java.lang.Object ref = preRelease_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          preRelease_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Pre-release identifier (e.g., "alpha", "beta.1").
+       * A series of dot-separated identifiers immediately following the patch version.
+       * </pre>
+       *
+       * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+       * @return The bytes for preRelease.
+       */
+      public com.google.protobuf.ByteString
+          getPreReleaseBytes() {
+        java.lang.Object ref = preRelease_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          preRelease_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Pre-release identifier (e.g., "alpha", "beta.1").
+       * A series of dot-separated identifiers immediately following the patch version.
+       * </pre>
+       *
+       * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+       * @param value The preRelease to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreRelease(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        preRelease_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Pre-release identifier (e.g., "alpha", "beta.1").
+       * A series of dot-separated identifiers immediately following the patch version.
+       * </pre>
+       *
+       * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPreRelease() {
+        preRelease_ = getDefaultInstance().getPreRelease();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Pre-release identifier (e.g., "alpha", "beta.1").
+       * A series of dot-separated identifiers immediately following the patch version.
+       * </pre>
+       *
+       * <code>optional string pre_release = 4 [json_name = "preRelease"];</code>
+       * @param value The bytes for preRelease to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreReleaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        preRelease_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion)
+    private static final io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion();
+    }
+
+    public static io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SemanticVersion>
+        PARSER = new com.google.protobuf.AbstractParser<SemanticVersion>() {
+      @java.lang.Override
+      public SemanticVersion parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SemanticVersion> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SemanticVersion> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private int bitField0_;
+  public static final int SERVICE_NAME_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object serviceName_ = "";
+  /**
+   * <pre>
+   * The canonical name of the service (e.g., "user-service", "billing-api").
+   * </pre>
+   *
+   * <code>string service_name = 1 [json_name = "serviceName"];</code>
+   * @return The serviceName.
+   */
+  @java.lang.Override
+  public java.lang.String getServiceName() {
+    java.lang.Object ref = serviceName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      serviceName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The canonical name of the service (e.g., "user-service", "billing-api").
+   * </pre>
+   *
+   * <code>string service_name = 1 [json_name = "serviceName"];</code>
+   * @return The bytes for serviceName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getServiceNameBytes() {
+    java.lang.Object ref = serviceName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      serviceName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SERVICE_DESCRIPTION_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object serviceDescription_ = "";
+  /**
+   * <pre>
+   * Human-readable description of the service and its purpose.
+   * </pre>
+   *
+   * <code>optional string service_description = 2 [json_name = "serviceDescription"];</code>
+   * @return Whether the serviceDescription field is set.
+   */
+  @java.lang.Override
+  public boolean hasServiceDescription() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * Human-readable description of the service and its purpose.
+   * </pre>
+   *
+   * <code>optional string service_description = 2 [json_name = "serviceDescription"];</code>
+   * @return The serviceDescription.
+   */
+  @java.lang.Override
+  public java.lang.String getServiceDescription() {
+    java.lang.Object ref = serviceDescription_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      serviceDescription_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Human-readable description of the service and its purpose.
+   * </pre>
+   *
+   * <code>optional string service_description = 2 [json_name = "serviceDescription"];</code>
+   * @return The bytes for serviceDescription.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getServiceDescriptionBytes() {
+    java.lang.Object ref = serviceDescription_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      serviceDescription_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SERVICE_ID_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object serviceId_ = "";
+  /**
+   * <pre>
+   * Unique identifier for this specific instance of the service (e.g., a UUID or hostname-pid).
+   * </pre>
+   *
+   * <code>optional string service_id = 3 [json_name = "serviceId"];</code>
+   * @return Whether the serviceId field is set.
+   */
+  @java.lang.Override
+  public boolean hasServiceId() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * Unique identifier for this specific instance of the service (e.g., a UUID or hostname-pid).
+   * </pre>
+   *
+   * <code>optional string service_id = 3 [json_name = "serviceId"];</code>
+   * @return The serviceId.
+   */
+  @java.lang.Override
+  public java.lang.String getServiceId() {
+    java.lang.Object ref = serviceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      serviceId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Unique identifier for this specific instance of the service (e.g., a UUID or hostname-pid).
+   * </pre>
+   *
+   * <code>optional string service_id = 3 [json_name = "serviceId"];</code>
+   * @return The bytes for serviceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getServiceIdBytes() {
+    java.lang.Object ref = serviceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      serviceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int IS_LEADER_FIELD_NUMBER = 4;
+  private boolean isLeader_ = false;
+  /**
+   * <pre>
+   * Indicates whether this service instance is currently the leader in a distributed system.
+   * True if this instance is the leader, false otherwise.
+   * </pre>
+   *
+   * <code>bool is_leader = 4 [json_name = "isLeader"];</code>
+   * @return The isLeader.
+   */
+  @java.lang.Override
+  public boolean getIsLeader() {
+    return isLeader_;
+  }
+
+  public static final int FULL_VERSION_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fullVersion_ = "";
+  /**
+   * <pre>
+   * The full version string of the service (e.g., "1.2.3-alpha+build.123").
+   * This may include semantic version, pre-release, and build metadata.
+   * </pre>
+   *
+   * <code>string full_version = 5 [json_name = "fullVersion"];</code>
+   * @return The fullVersion.
+   */
+  @java.lang.Override
+  public java.lang.String getFullVersion() {
+    java.lang.Object ref = fullVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      fullVersion_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The full version string of the service (e.g., "1.2.3-alpha+build.123").
+   * This may include semantic version, pre-release, and build metadata.
+   * </pre>
+   *
+   * <code>string full_version = 5 [json_name = "fullVersion"];</code>
+   * @return The bytes for fullVersion.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFullVersionBytes() {
+    java.lang.Object ref = fullVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      fullVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SEMANTIC_VERSION_FIELD_NUMBER = 6;
+  private io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semanticVersion_;
+  /**
+   * <pre>
+   * The structured semantic version of the service.
+   * </pre>
+   *
+   * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+   * @return Whether the semanticVersion field is set.
+   */
+  @java.lang.Override
+  public boolean hasSemanticVersion() {
+    return semanticVersion_ != null;
+  }
+  /**
+   * <pre>
+   * The structured semantic version of the service.
+   * </pre>
+   *
+   * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+   * @return The semanticVersion.
+   */
+  @java.lang.Override
+  public io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion getSemanticVersion() {
+    return semanticVersion_ == null ? io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.getDefaultInstance() : semanticVersion_;
+  }
+  /**
+   * <pre>
+   * The structured semantic version of the service.
+   * </pre>
+   *
+   * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+   */
+  @java.lang.Override
+  public io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersionOrBuilder getSemanticVersionOrBuilder() {
+    return semanticVersion_ == null ? io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.getDefaultInstance() : semanticVersion_;
+  }
+
+  public static final int BUILD_TIME_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object buildTime_ = "";
+  /**
+   * <pre>
+   * The timestamp indicating when the service binary was built.
+   * Human-readable timestamp representation (e.g., "2025-01-19T15:30:45Z").
+   * </pre>
+   *
+   * <code>string build_time = 7 [json_name = "buildTime"];</code>
+   * @return The buildTime.
+   */
+  @java.lang.Override
+  public java.lang.String getBuildTime() {
+    java.lang.Object ref = buildTime_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      buildTime_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The timestamp indicating when the service binary was built.
+   * Human-readable timestamp representation (e.g., "2025-01-19T15:30:45Z").
+   * </pre>
+   *
+   * <code>string build_time = 7 [json_name = "buildTime"];</code>
+   * @return The bytes for buildTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getBuildTimeBytes() {
+    java.lang.Object ref = buildTime_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      buildTime_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int BRANCH_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object branch_ = "";
+  /**
+   * <pre>
+   * Name of the source code branch from which this service instance was built (e.g., "main", "develop").
+   * </pre>
+   *
+   * <code>optional string branch = 8 [json_name = "branch"];</code>
+   * @return Whether the branch field is set.
+   */
+  @java.lang.Override
+  public boolean hasBranch() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * Name of the source code branch from which this service instance was built (e.g., "main", "develop").
+   * </pre>
+   *
+   * <code>optional string branch = 8 [json_name = "branch"];</code>
+   * @return The branch.
+   */
+  @java.lang.Override
+  public java.lang.String getBranch() {
+    java.lang.Object ref = branch_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      branch_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Name of the source code branch from which this service instance was built (e.g., "main", "develop").
+   * </pre>
+   *
+   * <code>optional string branch = 8 [json_name = "branch"];</code>
+   * @return The bytes for branch.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getBranchBytes() {
+    java.lang.Object ref = branch_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      branch_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int COMMIT_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object commit_ = "";
+  /**
+   * <pre>
+   * Full Git commit hash (SHA) of the source code revision from which this service instance was built.
+   * </pre>
+   *
+   * <code>optional string commit = 9 [json_name = "commit"];</code>
+   * @return Whether the commit field is set.
+   */
+  @java.lang.Override
+  public boolean hasCommit() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * Full Git commit hash (SHA) of the source code revision from which this service instance was built.
+   * </pre>
+   *
+   * <code>optional string commit = 9 [json_name = "commit"];</code>
+   * @return The commit.
+   */
+  @java.lang.Override
+  public java.lang.String getCommit() {
+    java.lang.Object ref = commit_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      commit_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Full Git commit hash (SHA) of the source code revision from which this service instance was built.
+   * </pre>
+   *
+   * <code>optional string commit = 9 [json_name = "commit"];</code>
+   * @return The bytes for commit.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCommitBytes() {
+    java.lang.Object ref = commit_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      commit_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int BUILD_TAGS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object buildTags_ = "";
+  /**
+   * <pre>
+   * Build tags or flags used during the compilation of the service.
+   * </pre>
+   *
+   * <code>optional string build_tags = 10 [json_name = "buildTags"];</code>
+   * @return Whether the buildTags field is set.
+   */
+  @java.lang.Override
+  public boolean hasBuildTags() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * Build tags or flags used during the compilation of the service.
+   * </pre>
+   *
+   * <code>optional string build_tags = 10 [json_name = "buildTags"];</code>
+   * @return The buildTags.
+   */
+  @java.lang.Override
+  public java.lang.String getBuildTags() {
+    java.lang.Object ref = buildTags_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      buildTags_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Build tags or flags used during the compilation of the service.
+   * </pre>
+   *
+   * <code>optional string build_tags = 10 [json_name = "buildTags"];</code>
+   * @return The bytes for buildTags.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getBuildTagsBytes() {
+    java.lang.Object ref = buildTags_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      buildTags_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int METADATA_FIELD_NUMBER = 11;
+  private static final class MetadataDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.String> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.String>newDefaultInstance(
+                io.altessa.serviceinfo.v1.Serviceinfo.internal_static_io_altessa_serviceinfo_v1_ServiceInfo_MetadataEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "");
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.String> metadata_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+  internalGetMetadata() {
+    if (metadata_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          MetadataDefaultEntryHolder.defaultEntry);
+    }
+    return metadata_;
+  }
+  public int getMetadataCount() {
+    return internalGetMetadata().getMap().size();
+  }
+  /**
+   * <pre>
+   * A collection of key-value pairs for additional, arbitrary metadata about the service instance.
+   * Keys and values are strings. Maximum 100 entries allowed.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; metadata = 11 [json_name = "metadata"];</code>
+   */
+  @java.lang.Override
+  public boolean containsMetadata(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetMetadata().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getMetadataMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+    return getMetadataMap();
+  }
+  /**
+   * <pre>
+   * A collection of key-value pairs for additional, arbitrary metadata about the service instance.
+   * Keys and values are strings. Maximum 100 entries allowed.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; metadata = 11 [json_name = "metadata"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+    return internalGetMetadata().getMap();
+  }
+  /**
+   * <pre>
+   * A collection of key-value pairs for additional, arbitrary metadata about the service instance.
+   * Keys and values are strings. Maximum 100 entries allowed.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; metadata = 11 [json_name = "metadata"];</code>
+   */
+  @java.lang.Override
+  public /* nullable */
+java.lang.String getMetadataOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetMetadata().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * A collection of key-value pairs for additional, arbitrary metadata about the service instance.
+   * Keys and values are strings. Maximum 100 entries allowed.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; metadata = 11 [json_name = "metadata"];</code>
+   */
+  @java.lang.Override
+  public java.lang.String getMetadataOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetMetadata().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
+  public static final int PROTO_VERSION_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object protoVersion_ = "";
+  /**
+   * <pre>
+   * Version of the Protobuf package or definitions that this service was compiled against.
+   * </pre>
+   *
+   * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
+   * @return Whether the protoVersion field is set.
+   */
+  @java.lang.Override
+  public boolean hasProtoVersion() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * Version of the Protobuf package or definitions that this service was compiled against.
+   * </pre>
+   *
+   * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
+   * @return The protoVersion.
+   */
+  @java.lang.Override
+  public java.lang.String getProtoVersion() {
+    java.lang.Object ref = protoVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      protoVersion_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Version of the Protobuf package or definitions that this service was compiled against.
+   * </pre>
+   *
+   * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
+   * @return The bytes for protoVersion.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getProtoVersionBytes() {
+    java.lang.Object ref = protoVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      protoVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int LEADER_ID_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object leaderId_ = "";
+  /**
+   * <pre>
+   * Identifier of the current leader instance if this node is not the leader.
+   * This is useful for clients to discover the active leader.
+   * </pre>
+   *
+   * <code>optional string leader_id = 13 [json_name = "leaderId"];</code>
+   * @return Whether the leaderId field is set.
+   */
+  @java.lang.Override
+  public boolean hasLeaderId() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * Identifier of the current leader instance if this node is not the leader.
+   * This is useful for clients to discover the active leader.
+   * </pre>
+   *
+   * <code>optional string leader_id = 13 [json_name = "leaderId"];</code>
+   * @return The leaderId.
+   */
+  @java.lang.Override
+  public java.lang.String getLeaderId() {
+    java.lang.Object ref = leaderId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      leaderId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Identifier of the current leader instance if this node is not the leader.
+   * This is useful for clients to discover the active leader.
+   * </pre>
+   *
+   * <code>optional string leader_id = 13 [json_name = "leaderId"];</code>
+   * @return The bytes for leaderId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLeaderIdBytes() {
+    java.lang.Object ref = leaderId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      leaderId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int START_TIME_FIELD_NUMBER = 14;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object startTime_ = "";
+  /**
+   * <pre>
+   * The timestamp when the service instance was started.
+   * Human-readable timestamp representation in RFC 3339 format (e.g., "2025-12-18T10:15:30Z").
+   * </pre>
+   *
+   * <code>optional string start_time = 14 [json_name = "startTime"];</code>
+   * @return Whether the startTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasStartTime() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * The timestamp when the service instance was started.
+   * Human-readable timestamp representation in RFC 3339 format (e.g., "2025-12-18T10:15:30Z").
+   * </pre>
+   *
+   * <code>optional string start_time = 14 [json_name = "startTime"];</code>
+   * @return The startTime.
+   */
+  @java.lang.Override
+  public java.lang.String getStartTime() {
+    java.lang.Object ref = startTime_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      startTime_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The timestamp when the service instance was started.
+   * Human-readable timestamp representation in RFC 3339 format (e.g., "2025-12-18T10:15:30Z").
+   * </pre>
+   *
+   * <code>optional string start_time = 14 [json_name = "startTime"];</code>
+   * @return The bytes for startTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getStartTimeBytes() {
+    java.lang.Object ref = startTime_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      startTime_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int UPTIME_FIELD_NUMBER = 15;
+  private long uptime_ = 0L;
+  /**
+   * <pre>
+   * The number of seconds the service has been running since startup.
+   * Calculated dynamically on each request as the difference between current time and start_time.
+   * </pre>
+   *
+   * <code>optional uint64 uptime = 15 [json_name = "uptime"];</code>
+   * @return Whether the uptime field is set.
+   */
+  @java.lang.Override
+  public boolean hasUptime() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * The number of seconds the service has been running since startup.
+   * Calculated dynamically on each request as the difference between current time and start_time.
+   * </pre>
+   *
+   * <code>optional uint64 uptime = 15 [json_name = "uptime"];</code>
+   * @return The uptime.
+   */
+  @java.lang.Override
+  public long getUptime() {
+    return uptime_;
+  }
+
+  private byte memoizedIsInitialized = -1;
+  @java.lang.Override
+  public final boolean isInitialized() {
+    byte isInitialized = memoizedIsInitialized;
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
+
+    memoizedIsInitialized = 1;
+    return true;
+  }
+
+  @java.lang.Override
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serviceName_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceDescription_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serviceId_);
+    }
+    if (isLeader_ != false) {
+      output.writeBool(4, isLeader_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, fullVersion_);
+    }
+    if (semanticVersion_ != null) {
+      output.writeMessage(6, getSemanticVersion());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buildTime_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, buildTime_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, branch_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, commit_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, buildTags_);
+    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetMetadata(),
+        MetadataDefaultEntryHolder.defaultEntry,
+        11);
+    if (((bitField0_ & 0x00000020) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, protoVersion_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, leaderId_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, startTime_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      output.writeUInt64(15, uptime_);
+    }
+    getUnknownFields().writeTo(output);
+  }
+
+  @java.lang.Override
+  public int getSerializedSize() {
+    int size = memoizedSize;
+    if (size != -1) return size;
+
+    size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serviceName_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceDescription_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serviceId_);
+    }
+    if (isLeader_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, isLeader_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, fullVersion_);
+    }
+    if (semanticVersion_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getSemanticVersion());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buildTime_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, buildTime_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, branch_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, commit_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, buildTags_);
+    }
+    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+         : internalGetMetadata().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+      metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, metadata__);
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, protoVersion_);
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, leaderId_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, startTime_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt64Size(15, uptime_);
+    }
+    size += getUnknownFields().getSerializedSize();
+    memoizedSize = size;
+    return size;
+  }
+
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
+    if (obj == this) {
+     return true;
+    }
+    if (!(obj instanceof io.altessa.serviceinfo.v1.ServiceInfo)) {
+      return super.equals(obj);
+    }
+    io.altessa.serviceinfo.v1.ServiceInfo other = (io.altessa.serviceinfo.v1.ServiceInfo) obj;
+
+    if (!getServiceName()
+        .equals(other.getServiceName())) return false;
+    if (hasServiceDescription() != other.hasServiceDescription()) return false;
+    if (hasServiceDescription()) {
+      if (!getServiceDescription()
+          .equals(other.getServiceDescription())) return false;
+    }
+    if (hasServiceId() != other.hasServiceId()) return false;
+    if (hasServiceId()) {
+      if (!getServiceId()
+          .equals(other.getServiceId())) return false;
+    }
+    if (getIsLeader()
+        != other.getIsLeader()) return false;
+    if (!getFullVersion()
+        .equals(other.getFullVersion())) return false;
+    if (hasSemanticVersion() != other.hasSemanticVersion()) return false;
+    if (hasSemanticVersion()) {
+      if (!getSemanticVersion()
+          .equals(other.getSemanticVersion())) return false;
+    }
+    if (!getBuildTime()
+        .equals(other.getBuildTime())) return false;
+    if (hasBranch() != other.hasBranch()) return false;
+    if (hasBranch()) {
+      if (!getBranch()
+          .equals(other.getBranch())) return false;
+    }
+    if (hasCommit() != other.hasCommit()) return false;
+    if (hasCommit()) {
+      if (!getCommit()
+          .equals(other.getCommit())) return false;
+    }
+    if (hasBuildTags() != other.hasBuildTags()) return false;
+    if (hasBuildTags()) {
+      if (!getBuildTags()
+          .equals(other.getBuildTags())) return false;
+    }
+    if (!internalGetMetadata().equals(
+        other.internalGetMetadata())) return false;
+    if (hasProtoVersion() != other.hasProtoVersion()) return false;
+    if (hasProtoVersion()) {
+      if (!getProtoVersion()
+          .equals(other.getProtoVersion())) return false;
+    }
+    if (hasLeaderId() != other.hasLeaderId()) return false;
+    if (hasLeaderId()) {
+      if (!getLeaderId()
+          .equals(other.getLeaderId())) return false;
+    }
+    if (hasStartTime() != other.hasStartTime()) return false;
+    if (hasStartTime()) {
+      if (!getStartTime()
+          .equals(other.getStartTime())) return false;
+    }
+    if (hasUptime() != other.hasUptime()) return false;
+    if (hasUptime()) {
+      if (getUptime()
+          != other.getUptime()) return false;
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    return true;
+  }
+
+  @java.lang.Override
+  public int hashCode() {
+    if (memoizedHashCode != 0) {
+      return memoizedHashCode;
+    }
+    int hash = 41;
+    hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + SERVICE_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getServiceName().hashCode();
+    if (hasServiceDescription()) {
+      hash = (37 * hash) + SERVICE_DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceDescription().hashCode();
+    }
+    if (hasServiceId()) {
+      hash = (37 * hash) + SERVICE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceId().hashCode();
+    }
+    hash = (37 * hash) + IS_LEADER_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsLeader());
+    hash = (37 * hash) + FULL_VERSION_FIELD_NUMBER;
+    hash = (53 * hash) + getFullVersion().hashCode();
+    if (hasSemanticVersion()) {
+      hash = (37 * hash) + SEMANTIC_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getSemanticVersion().hashCode();
+    }
+    hash = (37 * hash) + BUILD_TIME_FIELD_NUMBER;
+    hash = (53 * hash) + getBuildTime().hashCode();
+    if (hasBranch()) {
+      hash = (37 * hash) + BRANCH_FIELD_NUMBER;
+      hash = (53 * hash) + getBranch().hashCode();
+    }
+    if (hasCommit()) {
+      hash = (37 * hash) + COMMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getCommit().hashCode();
+    }
+    if (hasBuildTags()) {
+      hash = (37 * hash) + BUILD_TAGS_FIELD_NUMBER;
+      hash = (53 * hash) + getBuildTags().hashCode();
+    }
+    if (!internalGetMetadata().getMap().isEmpty()) {
+      hash = (37 * hash) + METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetMetadata().hashCode();
+    }
+    if (hasProtoVersion()) {
+      hash = (37 * hash) + PROTO_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getProtoVersion().hashCode();
+    }
+    if (hasLeaderId()) {
+      hash = (37 * hash) + LEADER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLeaderId().hashCode();
+    }
+    if (hasStartTime()) {
+      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getStartTime().hashCode();
+    }
+    if (hasUptime()) {
+      hash = (37 * hash) + UPTIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUptime());
+    }
+    hash = (29 * hash) + getUnknownFields().hashCode();
+    memoizedHashCode = hash;
+    return hash;
+  }
+
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseFrom(
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseFrom(
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseFrom(
+      com.google.protobuf.ByteString data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseFrom(
+      com.google.protobuf.ByteString data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseFrom(byte[] data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseFrom(
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseDelimitedFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
+  }
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseDelimitedFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+  }
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseFrom(
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+  public static io.altessa.serviceinfo.v1.ServiceInfo parseFrom(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  @java.lang.Override
+  public Builder newBuilderForType() { return newBuilder(); }
+  public static Builder newBuilder() {
+    return DEFAULT_INSTANCE.toBuilder();
+  }
+  public static Builder newBuilder(io.altessa.serviceinfo.v1.ServiceInfo prototype) {
+    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+  }
+  @java.lang.Override
+  public Builder toBuilder() {
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
+  }
+
+  @java.lang.Override
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    Builder builder = new Builder(parent);
+    return builder;
+  }
+  /**
+   * <pre>
+   * Defines detailed information about a running service instance.
+   * It includes identification, versioning, build details, leadership status, and other metadata.
+   * </pre>
+   *
+   * Protobuf type {@code io.altessa.serviceinfo.v1.ServiceInfo}
+   */
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+      // @@protoc_insertion_point(builder_implements:io.altessa.serviceinfo.v1.ServiceInfo)
+      io.altessa.serviceinfo.v1.ServiceInfoOrBuilder {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.altessa.serviceinfo.v1.Serviceinfo.internal_static_io_altessa_serviceinfo_v1_ServiceInfo_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 11:
+          return internalGetMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 11:
+          return internalGetMutableMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.altessa.serviceinfo.v1.Serviceinfo.internal_static_io_altessa_serviceinfo_v1_ServiceInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.altessa.serviceinfo.v1.ServiceInfo.class, io.altessa.serviceinfo.v1.ServiceInfo.Builder.class);
+    }
+
+    // Construct using io.altessa.serviceinfo.v1.ServiceInfo.newBuilder()
+    private Builder() {
+
+    }
+
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      super(parent);
+
+    }
+    @java.lang.Override
+    public Builder clear() {
+      super.clear();
+      bitField0_ = 0;
+      serviceName_ = "";
+      serviceDescription_ = "";
+      serviceId_ = "";
+      isLeader_ = false;
+      fullVersion_ = "";
+      semanticVersion_ = null;
+      if (semanticVersionBuilder_ != null) {
+        semanticVersionBuilder_.dispose();
+        semanticVersionBuilder_ = null;
+      }
+      buildTime_ = "";
+      branch_ = "";
+      commit_ = "";
+      buildTags_ = "";
+      internalGetMutableMetadata().clear();
+      protoVersion_ = "";
+      leaderId_ = "";
+      startTime_ = "";
+      uptime_ = 0L;
+      return this;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return io.altessa.serviceinfo.v1.Serviceinfo.internal_static_io_altessa_serviceinfo_v1_ServiceInfo_descriptor;
+    }
+
+    @java.lang.Override
+    public io.altessa.serviceinfo.v1.ServiceInfo getDefaultInstanceForType() {
+      return io.altessa.serviceinfo.v1.ServiceInfo.getDefaultInstance();
+    }
+
+    @java.lang.Override
+    public io.altessa.serviceinfo.v1.ServiceInfo build() {
+      io.altessa.serviceinfo.v1.ServiceInfo result = buildPartial();
+      if (!result.isInitialized()) {
+        throw newUninitializedMessageException(result);
+      }
+      return result;
+    }
+
+    @java.lang.Override
+    public io.altessa.serviceinfo.v1.ServiceInfo buildPartial() {
+      io.altessa.serviceinfo.v1.ServiceInfo result = new io.altessa.serviceinfo.v1.ServiceInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(io.altessa.serviceinfo.v1.ServiceInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.serviceName_ = serviceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.serviceDescription_ = serviceDescription_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.serviceId_ = serviceId_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.isLeader_ = isLeader_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.fullVersion_ = fullVersion_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.semanticVersion_ = semanticVersionBuilder_ == null
+            ? semanticVersion_
+            : semanticVersionBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.buildTime_ = buildTime_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.branch_ = branch_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.commit_ = commit_;
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.buildTags_ = buildTags_;
+        to_bitField0_ |= 0x00000010;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.metadata_ = internalGetMetadata();
+        result.metadata_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.protoVersion_ = protoVersion_;
+        to_bitField0_ |= 0x00000020;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.leaderId_ = leaderId_;
+        to_bitField0_ |= 0x00000040;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.startTime_ = startTime_;
+        to_bitField0_ |= 0x00000080;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.uptime_ = uptime_;
+        to_bitField0_ |= 0x00000100;
+      }
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    @java.lang.Override
+    public Builder clone() {
+      return super.clone();
+    }
+    @java.lang.Override
+    public Builder setField(
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
+      return super.setField(field, value);
+    }
+    @java.lang.Override
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
+      return super.clearField(field);
+    }
+    @java.lang.Override
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      return super.clearOneof(oneof);
+    }
+    @java.lang.Override
+    public Builder setRepeatedField(
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
+      return super.setRepeatedField(field, index, value);
+    }
+    @java.lang.Override
+    public Builder addRepeatedField(
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
+      return super.addRepeatedField(field, value);
+    }
+    @java.lang.Override
+    public Builder mergeFrom(com.google.protobuf.Message other) {
+      if (other instanceof io.altessa.serviceinfo.v1.ServiceInfo) {
+        return mergeFrom((io.altessa.serviceinfo.v1.ServiceInfo)other);
+      } else {
+        super.mergeFrom(other);
+        return this;
+      }
+    }
+
+    public Builder mergeFrom(io.altessa.serviceinfo.v1.ServiceInfo other) {
+      if (other == io.altessa.serviceinfo.v1.ServiceInfo.getDefaultInstance()) return this;
+      if (!other.getServiceName().isEmpty()) {
+        serviceName_ = other.serviceName_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (other.hasServiceDescription()) {
+        serviceDescription_ = other.serviceDescription_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.hasServiceId()) {
+        serviceId_ = other.serviceId_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (other.getIsLeader() != false) {
+        setIsLeader(other.getIsLeader());
+      }
+      if (!other.getFullVersion().isEmpty()) {
+        fullVersion_ = other.fullVersion_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (other.hasSemanticVersion()) {
+        mergeSemanticVersion(other.getSemanticVersion());
+      }
+      if (!other.getBuildTime().isEmpty()) {
+        buildTime_ = other.buildTime_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
+      if (other.hasBranch()) {
+        branch_ = other.branch_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      if (other.hasCommit()) {
+        commit_ = other.commit_;
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      if (other.hasBuildTags()) {
+        buildTags_ = other.buildTags_;
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
+      internalGetMutableMetadata().mergeFrom(
+          other.internalGetMetadata());
+      bitField0_ |= 0x00000400;
+      if (other.hasProtoVersion()) {
+        protoVersion_ = other.protoVersion_;
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      if (other.hasLeaderId()) {
+        leaderId_ = other.leaderId_;
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
+      if (other.hasStartTime()) {
+        startTime_ = other.startTime_;
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
+      if (other.hasUptime()) {
+        setUptime(other.getUptime());
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
+      onChanged();
+      return this;
+    }
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      return true;
+    }
+
+    @java.lang.Override
+    public Builder mergeFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              serviceName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              serviceDescription_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              serviceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              isLeader_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              fullVersion_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getSemanticVersionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              buildTime_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              branch_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              commit_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              buildTags_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              metadata__ = input.readMessage(
+                  MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableMetadata().getMutableMap().put(
+                  metadata__.getKey(), metadata__.getValue());
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              protoVersion_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 106: {
+              leaderId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
+            case 114: {
+              startTime_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
+            case 120: {
+              uptime_ = input.readUInt64();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 120
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.unwrapIOException();
+      } finally {
+        onChanged();
+      } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private java.lang.Object serviceName_ = "";
+    /**
+     * <pre>
+     * The canonical name of the service (e.g., "user-service", "billing-api").
+     * </pre>
+     *
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    public java.lang.String getServiceName() {
+      java.lang.Object ref = serviceName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The canonical name of the service (e.g., "user-service", "billing-api").
+     * </pre>
+     *
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    public com.google.protobuf.ByteString
+        getServiceNameBytes() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The canonical name of the service (e.g., "user-service", "billing-api").
+     * </pre>
+     *
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @param value The serviceName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      serviceName_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The canonical name of the service (e.g., "user-service", "billing-api").
+     * </pre>
+     *
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearServiceName() {
+      serviceName_ = getDefaultInstance().getServiceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The canonical name of the service (e.g., "user-service", "billing-api").
+     * </pre>
+     *
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @param value The bytes for serviceName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      serviceName_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object serviceDescription_ = "";
+    /**
+     * <pre>
+     * Human-readable description of the service and its purpose.
+     * </pre>
+     *
+     * <code>optional string service_description = 2 [json_name = "serviceDescription"];</code>
+     * @return Whether the serviceDescription field is set.
+     */
+    public boolean hasServiceDescription() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Human-readable description of the service and its purpose.
+     * </pre>
+     *
+     * <code>optional string service_description = 2 [json_name = "serviceDescription"];</code>
+     * @return The serviceDescription.
+     */
+    public java.lang.String getServiceDescription() {
+      java.lang.Object ref = serviceDescription_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceDescription_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Human-readable description of the service and its purpose.
+     * </pre>
+     *
+     * <code>optional string service_description = 2 [json_name = "serviceDescription"];</code>
+     * @return The bytes for serviceDescription.
+     */
+    public com.google.protobuf.ByteString
+        getServiceDescriptionBytes() {
+      java.lang.Object ref = serviceDescription_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceDescription_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Human-readable description of the service and its purpose.
+     * </pre>
+     *
+     * <code>optional string service_description = 2 [json_name = "serviceDescription"];</code>
+     * @param value The serviceDescription to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceDescription(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      serviceDescription_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Human-readable description of the service and its purpose.
+     * </pre>
+     *
+     * <code>optional string service_description = 2 [json_name = "serviceDescription"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearServiceDescription() {
+      serviceDescription_ = getDefaultInstance().getServiceDescription();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Human-readable description of the service and its purpose.
+     * </pre>
+     *
+     * <code>optional string service_description = 2 [json_name = "serviceDescription"];</code>
+     * @param value The bytes for serviceDescription to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      serviceDescription_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object serviceId_ = "";
+    /**
+     * <pre>
+     * Unique identifier for this specific instance of the service (e.g., a UUID or hostname-pid).
+     * </pre>
+     *
+     * <code>optional string service_id = 3 [json_name = "serviceId"];</code>
+     * @return Whether the serviceId field is set.
+     */
+    public boolean hasServiceId() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Unique identifier for this specific instance of the service (e.g., a UUID or hostname-pid).
+     * </pre>
+     *
+     * <code>optional string service_id = 3 [json_name = "serviceId"];</code>
+     * @return The serviceId.
+     */
+    public java.lang.String getServiceId() {
+      java.lang.Object ref = serviceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier for this specific instance of the service (e.g., a UUID or hostname-pid).
+     * </pre>
+     *
+     * <code>optional string service_id = 3 [json_name = "serviceId"];</code>
+     * @return The bytes for serviceId.
+     */
+    public com.google.protobuf.ByteString
+        getServiceIdBytes() {
+      java.lang.Object ref = serviceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier for this specific instance of the service (e.g., a UUID or hostname-pid).
+     * </pre>
+     *
+     * <code>optional string service_id = 3 [json_name = "serviceId"];</code>
+     * @param value The serviceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      serviceId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Unique identifier for this specific instance of the service (e.g., a UUID or hostname-pid).
+     * </pre>
+     *
+     * <code>optional string service_id = 3 [json_name = "serviceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearServiceId() {
+      serviceId_ = getDefaultInstance().getServiceId();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Unique identifier for this specific instance of the service (e.g., a UUID or hostname-pid).
+     * </pre>
+     *
+     * <code>optional string service_id = 3 [json_name = "serviceId"];</code>
+     * @param value The bytes for serviceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      serviceId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private boolean isLeader_ ;
+    /**
+     * <pre>
+     * Indicates whether this service instance is currently the leader in a distributed system.
+     * True if this instance is the leader, false otherwise.
+     * </pre>
+     *
+     * <code>bool is_leader = 4 [json_name = "isLeader"];</code>
+     * @return The isLeader.
+     */
+    @java.lang.Override
+    public boolean getIsLeader() {
+      return isLeader_;
+    }
+    /**
+     * <pre>
+     * Indicates whether this service instance is currently the leader in a distributed system.
+     * True if this instance is the leader, false otherwise.
+     * </pre>
+     *
+     * <code>bool is_leader = 4 [json_name = "isLeader"];</code>
+     * @param value The isLeader to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsLeader(boolean value) {
+      
+      isLeader_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates whether this service instance is currently the leader in a distributed system.
+     * True if this instance is the leader, false otherwise.
+     * </pre>
+     *
+     * <code>bool is_leader = 4 [json_name = "isLeader"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsLeader() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      isLeader_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object fullVersion_ = "";
+    /**
+     * <pre>
+     * The full version string of the service (e.g., "1.2.3-alpha+build.123").
+     * This may include semantic version, pre-release, and build metadata.
+     * </pre>
+     *
+     * <code>string full_version = 5 [json_name = "fullVersion"];</code>
+     * @return The fullVersion.
+     */
+    public java.lang.String getFullVersion() {
+      java.lang.Object ref = fullVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fullVersion_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The full version string of the service (e.g., "1.2.3-alpha+build.123").
+     * This may include semantic version, pre-release, and build metadata.
+     * </pre>
+     *
+     * <code>string full_version = 5 [json_name = "fullVersion"];</code>
+     * @return The bytes for fullVersion.
+     */
+    public com.google.protobuf.ByteString
+        getFullVersionBytes() {
+      java.lang.Object ref = fullVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fullVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The full version string of the service (e.g., "1.2.3-alpha+build.123").
+     * This may include semantic version, pre-release, and build metadata.
+     * </pre>
+     *
+     * <code>string full_version = 5 [json_name = "fullVersion"];</code>
+     * @param value The fullVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFullVersion(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      fullVersion_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The full version string of the service (e.g., "1.2.3-alpha+build.123").
+     * This may include semantic version, pre-release, and build metadata.
+     * </pre>
+     *
+     * <code>string full_version = 5 [json_name = "fullVersion"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFullVersion() {
+      fullVersion_ = getDefaultInstance().getFullVersion();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The full version string of the service (e.g., "1.2.3-alpha+build.123").
+     * This may include semantic version, pre-release, and build metadata.
+     * </pre>
+     *
+     * <code>string full_version = 5 [json_name = "fullVersion"];</code>
+     * @param value The bytes for fullVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFullVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      fullVersion_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semanticVersion_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion, io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.Builder, io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersionOrBuilder> semanticVersionBuilder_;
+    /**
+     * <pre>
+     * The structured semantic version of the service.
+     * </pre>
+     *
+     * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+     * @return Whether the semanticVersion field is set.
+     */
+    public boolean hasSemanticVersion() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * The structured semantic version of the service.
+     * </pre>
+     *
+     * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+     * @return The semanticVersion.
+     */
+    public io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion getSemanticVersion() {
+      if (semanticVersionBuilder_ == null) {
+        return semanticVersion_ == null ? io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.getDefaultInstance() : semanticVersion_;
+      } else {
+        return semanticVersionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The structured semantic version of the service.
+     * </pre>
+     *
+     * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+     */
+    public Builder setSemanticVersion(io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion value) {
+      if (semanticVersionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        semanticVersion_ = value;
+      } else {
+        semanticVersionBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The structured semantic version of the service.
+     * </pre>
+     *
+     * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+     */
+    public Builder setSemanticVersion(
+        io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.Builder builderForValue) {
+      if (semanticVersionBuilder_ == null) {
+        semanticVersion_ = builderForValue.build();
+      } else {
+        semanticVersionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The structured semantic version of the service.
+     * </pre>
+     *
+     * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+     */
+    public Builder mergeSemanticVersion(io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion value) {
+      if (semanticVersionBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          semanticVersion_ != null &&
+          semanticVersion_ != io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.getDefaultInstance()) {
+          getSemanticVersionBuilder().mergeFrom(value);
+        } else {
+          semanticVersion_ = value;
+        }
+      } else {
+        semanticVersionBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The structured semantic version of the service.
+     * </pre>
+     *
+     * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+     */
+    public Builder clearSemanticVersion() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      semanticVersion_ = null;
+      if (semanticVersionBuilder_ != null) {
+        semanticVersionBuilder_.dispose();
+        semanticVersionBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The structured semantic version of the service.
+     * </pre>
+     *
+     * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+     */
+    public io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.Builder getSemanticVersionBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getSemanticVersionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The structured semantic version of the service.
+     * </pre>
+     *
+     * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+     */
+    public io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersionOrBuilder getSemanticVersionOrBuilder() {
+      if (semanticVersionBuilder_ != null) {
+        return semanticVersionBuilder_.getMessageOrBuilder();
+      } else {
+        return semanticVersion_ == null ?
+            io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.getDefaultInstance() : semanticVersion_;
+      }
+    }
+    /**
+     * <pre>
+     * The structured semantic version of the service.
+     * </pre>
+     *
+     * <code>.io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion semantic_version = 6 [json_name = "semanticVersion"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion, io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.Builder, io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersionOrBuilder> 
+        getSemanticVersionFieldBuilder() {
+      if (semanticVersionBuilder_ == null) {
+        semanticVersionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion, io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersion.Builder, io.altessa.serviceinfo.v1.ServiceInfo.SemanticVersionOrBuilder>(
+                getSemanticVersion(),
+                getParentForChildren(),
+                isClean());
+        semanticVersion_ = null;
+      }
+      return semanticVersionBuilder_;
+    }
+
+    private java.lang.Object buildTime_ = "";
+    /**
+     * <pre>
+     * The timestamp indicating when the service binary was built.
+     * Human-readable timestamp representation (e.g., "2025-01-19T15:30:45Z").
+     * </pre>
+     *
+     * <code>string build_time = 7 [json_name = "buildTime"];</code>
+     * @return The buildTime.
+     */
+    public java.lang.String getBuildTime() {
+      java.lang.Object ref = buildTime_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buildTime_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The timestamp indicating when the service binary was built.
+     * Human-readable timestamp representation (e.g., "2025-01-19T15:30:45Z").
+     * </pre>
+     *
+     * <code>string build_time = 7 [json_name = "buildTime"];</code>
+     * @return The bytes for buildTime.
+     */
+    public com.google.protobuf.ByteString
+        getBuildTimeBytes() {
+      java.lang.Object ref = buildTime_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buildTime_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The timestamp indicating when the service binary was built.
+     * Human-readable timestamp representation (e.g., "2025-01-19T15:30:45Z").
+     * </pre>
+     *
+     * <code>string build_time = 7 [json_name = "buildTime"];</code>
+     * @param value The buildTime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBuildTime(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      buildTime_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The timestamp indicating when the service binary was built.
+     * Human-readable timestamp representation (e.g., "2025-01-19T15:30:45Z").
+     * </pre>
+     *
+     * <code>string build_time = 7 [json_name = "buildTime"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBuildTime() {
+      buildTime_ = getDefaultInstance().getBuildTime();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The timestamp indicating when the service binary was built.
+     * Human-readable timestamp representation (e.g., "2025-01-19T15:30:45Z").
+     * </pre>
+     *
+     * <code>string build_time = 7 [json_name = "buildTime"];</code>
+     * @param value The bytes for buildTime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBuildTimeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      buildTime_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object branch_ = "";
+    /**
+     * <pre>
+     * Name of the source code branch from which this service instance was built (e.g., "main", "develop").
+     * </pre>
+     *
+     * <code>optional string branch = 8 [json_name = "branch"];</code>
+     * @return Whether the branch field is set.
+     */
+    public boolean hasBranch() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Name of the source code branch from which this service instance was built (e.g., "main", "develop").
+     * </pre>
+     *
+     * <code>optional string branch = 8 [json_name = "branch"];</code>
+     * @return The branch.
+     */
+    public java.lang.String getBranch() {
+      java.lang.Object ref = branch_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        branch_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the source code branch from which this service instance was built (e.g., "main", "develop").
+     * </pre>
+     *
+     * <code>optional string branch = 8 [json_name = "branch"];</code>
+     * @return The bytes for branch.
+     */
+    public com.google.protobuf.ByteString
+        getBranchBytes() {
+      java.lang.Object ref = branch_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        branch_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the source code branch from which this service instance was built (e.g., "main", "develop").
+     * </pre>
+     *
+     * <code>optional string branch = 8 [json_name = "branch"];</code>
+     * @param value The branch to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBranch(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      branch_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Name of the source code branch from which this service instance was built (e.g., "main", "develop").
+     * </pre>
+     *
+     * <code>optional string branch = 8 [json_name = "branch"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBranch() {
+      branch_ = getDefaultInstance().getBranch();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Name of the source code branch from which this service instance was built (e.g., "main", "develop").
+     * </pre>
+     *
+     * <code>optional string branch = 8 [json_name = "branch"];</code>
+     * @param value The bytes for branch to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBranchBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      branch_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object commit_ = "";
+    /**
+     * <pre>
+     * Full Git commit hash (SHA) of the source code revision from which this service instance was built.
+     * </pre>
+     *
+     * <code>optional string commit = 9 [json_name = "commit"];</code>
+     * @return Whether the commit field is set.
+     */
+    public boolean hasCommit() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * Full Git commit hash (SHA) of the source code revision from which this service instance was built.
+     * </pre>
+     *
+     * <code>optional string commit = 9 [json_name = "commit"];</code>
+     * @return The commit.
+     */
+    public java.lang.String getCommit() {
+      java.lang.Object ref = commit_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        commit_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Full Git commit hash (SHA) of the source code revision from which this service instance was built.
+     * </pre>
+     *
+     * <code>optional string commit = 9 [json_name = "commit"];</code>
+     * @return The bytes for commit.
+     */
+    public com.google.protobuf.ByteString
+        getCommitBytes() {
+      java.lang.Object ref = commit_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        commit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Full Git commit hash (SHA) of the source code revision from which this service instance was built.
+     * </pre>
+     *
+     * <code>optional string commit = 9 [json_name = "commit"];</code>
+     * @param value The commit to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCommit(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      commit_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Full Git commit hash (SHA) of the source code revision from which this service instance was built.
+     * </pre>
+     *
+     * <code>optional string commit = 9 [json_name = "commit"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCommit() {
+      commit_ = getDefaultInstance().getCommit();
+      bitField0_ = (bitField0_ & ~0x00000100);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Full Git commit hash (SHA) of the source code revision from which this service instance was built.
+     * </pre>
+     *
+     * <code>optional string commit = 9 [json_name = "commit"];</code>
+     * @param value The bytes for commit to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCommitBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      commit_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object buildTags_ = "";
+    /**
+     * <pre>
+     * Build tags or flags used during the compilation of the service.
+     * </pre>
+     *
+     * <code>optional string build_tags = 10 [json_name = "buildTags"];</code>
+     * @return Whether the buildTags field is set.
+     */
+    public boolean hasBuildTags() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * Build tags or flags used during the compilation of the service.
+     * </pre>
+     *
+     * <code>optional string build_tags = 10 [json_name = "buildTags"];</code>
+     * @return The buildTags.
+     */
+    public java.lang.String getBuildTags() {
+      java.lang.Object ref = buildTags_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buildTags_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Build tags or flags used during the compilation of the service.
+     * </pre>
+     *
+     * <code>optional string build_tags = 10 [json_name = "buildTags"];</code>
+     * @return The bytes for buildTags.
+     */
+    public com.google.protobuf.ByteString
+        getBuildTagsBytes() {
+      java.lang.Object ref = buildTags_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buildTags_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Build tags or flags used during the compilation of the service.
+     * </pre>
+     *
+     * <code>optional string build_tags = 10 [json_name = "buildTags"];</code>
+     * @param value The buildTags to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBuildTags(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      buildTags_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Build tags or flags used during the compilation of the service.
+     * </pre>
+     *
+     * <code>optional string build_tags = 10 [json_name = "buildTags"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBuildTags() {
+      buildTags_ = getDefaultInstance().getBuildTags();
+      bitField0_ = (bitField0_ & ~0x00000200);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Build tags or flags used during the compilation of the service.
+     * </pre>
+     *
+     * <code>optional string build_tags = 10 [json_name = "buildTags"];</code>
+     * @param value The bytes for buildTags to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBuildTagsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      buildTags_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> metadata_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMetadata() {
+      if (metadata_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MetadataDefaultEntryHolder.defaultEntry);
+      }
+      return metadata_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableMetadata() {
+      if (metadata_ == null) {
+        metadata_ = com.google.protobuf.MapField.newMapField(
+            MetadataDefaultEntryHolder.defaultEntry);
+      }
+      if (!metadata_.isMutable()) {
+        metadata_ = metadata_.copy();
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return metadata_;
+    }
+    public int getMetadataCount() {
+      return internalGetMetadata().getMap().size();
+    }
+    /**
+     * <pre>
+     * A collection of key-value pairs for additional, arbitrary metadata about the service instance.
+     * Keys and values are strings. Maximum 100 entries allowed.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 11 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public boolean containsMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetMetadata().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMetadataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+      return getMetadataMap();
+    }
+    /**
+     * <pre>
+     * A collection of key-value pairs for additional, arbitrary metadata about the service instance.
+     * Keys and values are strings. Maximum 100 entries allowed.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 11 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+      return internalGetMetadata().getMap();
+    }
+    /**
+     * <pre>
+     * A collection of key-value pairs for additional, arbitrary metadata about the service instance.
+     * Keys and values are strings. Maximum 100 entries allowed.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 11 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+java.lang.String getMetadataOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMetadata().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * A collection of key-value pairs for additional, arbitrary metadata about the service instance.
+     * Keys and values are strings. Maximum 100 entries allowed.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 11 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public java.lang.String getMetadataOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMetadata().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearMetadata() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      internalGetMutableMetadata().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * A collection of key-value pairs for additional, arbitrary metadata about the service instance.
+     * Keys and values are strings. Maximum 100 entries allowed.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 11 [json_name = "metadata"];</code>
+     */
+    public Builder removeMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableMetadata().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String>
+        getMutableMetadata() {
+      bitField0_ |= 0x00000400;
+      return internalGetMutableMetadata().getMutableMap();
+    }
+    /**
+     * <pre>
+     * A collection of key-value pairs for additional, arbitrary metadata about the service instance.
+     * Keys and values are strings. Maximum 100 entries allowed.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 11 [json_name = "metadata"];</code>
+     */
+    public Builder putMetadata(
+        java.lang.String key,
+        java.lang.String value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableMetadata().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000400;
+      return this;
+    }
+    /**
+     * <pre>
+     * A collection of key-value pairs for additional, arbitrary metadata about the service instance.
+     * Keys and values are strings. Maximum 100 entries allowed.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; metadata = 11 [json_name = "metadata"];</code>
+     */
+    public Builder putAllMetadata(
+        java.util.Map<java.lang.String, java.lang.String> values) {
+      internalGetMutableMetadata().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000400;
+      return this;
+    }
+
+    private java.lang.Object protoVersion_ = "";
+    /**
+     * <pre>
+     * Version of the Protobuf package or definitions that this service was compiled against.
+     * </pre>
+     *
+     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
+     * @return Whether the protoVersion field is set.
+     */
+    public boolean hasProtoVersion() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * Version of the Protobuf package or definitions that this service was compiled against.
+     * </pre>
+     *
+     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
+     * @return The protoVersion.
+     */
+    public java.lang.String getProtoVersion() {
+      java.lang.Object ref = protoVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        protoVersion_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Version of the Protobuf package or definitions that this service was compiled against.
+     * </pre>
+     *
+     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
+     * @return The bytes for protoVersion.
+     */
+    public com.google.protobuf.ByteString
+        getProtoVersionBytes() {
+      java.lang.Object ref = protoVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        protoVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Version of the Protobuf package or definitions that this service was compiled against.
+     * </pre>
+     *
+     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
+     * @param value The protoVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProtoVersion(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      protoVersion_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Version of the Protobuf package or definitions that this service was compiled against.
+     * </pre>
+     *
+     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProtoVersion() {
+      protoVersion_ = getDefaultInstance().getProtoVersion();
+      bitField0_ = (bitField0_ & ~0x00000800);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Version of the Protobuf package or definitions that this service was compiled against.
+     * </pre>
+     *
+     * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
+     * @param value The bytes for protoVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProtoVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      protoVersion_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object leaderId_ = "";
+    /**
+     * <pre>
+     * Identifier of the current leader instance if this node is not the leader.
+     * This is useful for clients to discover the active leader.
+     * </pre>
+     *
+     * <code>optional string leader_id = 13 [json_name = "leaderId"];</code>
+     * @return Whether the leaderId field is set.
+     */
+    public boolean hasLeaderId() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * Identifier of the current leader instance if this node is not the leader.
+     * This is useful for clients to discover the active leader.
+     * </pre>
+     *
+     * <code>optional string leader_id = 13 [json_name = "leaderId"];</code>
+     * @return The leaderId.
+     */
+    public java.lang.String getLeaderId() {
+      java.lang.Object ref = leaderId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        leaderId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Identifier of the current leader instance if this node is not the leader.
+     * This is useful for clients to discover the active leader.
+     * </pre>
+     *
+     * <code>optional string leader_id = 13 [json_name = "leaderId"];</code>
+     * @return The bytes for leaderId.
+     */
+    public com.google.protobuf.ByteString
+        getLeaderIdBytes() {
+      java.lang.Object ref = leaderId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        leaderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Identifier of the current leader instance if this node is not the leader.
+     * This is useful for clients to discover the active leader.
+     * </pre>
+     *
+     * <code>optional string leader_id = 13 [json_name = "leaderId"];</code>
+     * @param value The leaderId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLeaderId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      leaderId_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifier of the current leader instance if this node is not the leader.
+     * This is useful for clients to discover the active leader.
+     * </pre>
+     *
+     * <code>optional string leader_id = 13 [json_name = "leaderId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLeaderId() {
+      leaderId_ = getDefaultInstance().getLeaderId();
+      bitField0_ = (bitField0_ & ~0x00001000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifier of the current leader instance if this node is not the leader.
+     * This is useful for clients to discover the active leader.
+     * </pre>
+     *
+     * <code>optional string leader_id = 13 [json_name = "leaderId"];</code>
+     * @param value The bytes for leaderId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLeaderIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      leaderId_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object startTime_ = "";
+    /**
+     * <pre>
+     * The timestamp when the service instance was started.
+     * Human-readable timestamp representation in RFC 3339 format (e.g., "2025-12-18T10:15:30Z").
+     * </pre>
+     *
+     * <code>optional string start_time = 14 [json_name = "startTime"];</code>
+     * @return Whether the startTime field is set.
+     */
+    public boolean hasStartTime() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * The timestamp when the service instance was started.
+     * Human-readable timestamp representation in RFC 3339 format (e.g., "2025-12-18T10:15:30Z").
+     * </pre>
+     *
+     * <code>optional string start_time = 14 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    public java.lang.String getStartTime() {
+      java.lang.Object ref = startTime_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        startTime_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The timestamp when the service instance was started.
+     * Human-readable timestamp representation in RFC 3339 format (e.g., "2025-12-18T10:15:30Z").
+     * </pre>
+     *
+     * <code>optional string start_time = 14 [json_name = "startTime"];</code>
+     * @return The bytes for startTime.
+     */
+    public com.google.protobuf.ByteString
+        getStartTimeBytes() {
+      java.lang.Object ref = startTime_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        startTime_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The timestamp when the service instance was started.
+     * Human-readable timestamp representation in RFC 3339 format (e.g., "2025-12-18T10:15:30Z").
+     * </pre>
+     *
+     * <code>optional string start_time = 14 [json_name = "startTime"];</code>
+     * @param value The startTime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStartTime(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      startTime_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The timestamp when the service instance was started.
+     * Human-readable timestamp representation in RFC 3339 format (e.g., "2025-12-18T10:15:30Z").
+     * </pre>
+     *
+     * <code>optional string start_time = 14 [json_name = "startTime"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStartTime() {
+      startTime_ = getDefaultInstance().getStartTime();
+      bitField0_ = (bitField0_ & ~0x00002000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The timestamp when the service instance was started.
+     * Human-readable timestamp representation in RFC 3339 format (e.g., "2025-12-18T10:15:30Z").
+     * </pre>
+     *
+     * <code>optional string start_time = 14 [json_name = "startTime"];</code>
+     * @param value The bytes for startTime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStartTimeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      startTime_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+
+    private long uptime_ ;
+    /**
+     * <pre>
+     * The number of seconds the service has been running since startup.
+     * Calculated dynamically on each request as the difference between current time and start_time.
+     * </pre>
+     *
+     * <code>optional uint64 uptime = 15 [json_name = "uptime"];</code>
+     * @return Whether the uptime field is set.
+     */
+    @java.lang.Override
+    public boolean hasUptime() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * The number of seconds the service has been running since startup.
+     * Calculated dynamically on each request as the difference between current time and start_time.
+     * </pre>
+     *
+     * <code>optional uint64 uptime = 15 [json_name = "uptime"];</code>
+     * @return The uptime.
+     */
+    @java.lang.Override
+    public long getUptime() {
+      return uptime_;
+    }
+    /**
+     * <pre>
+     * The number of seconds the service has been running since startup.
+     * Calculated dynamically on each request as the difference between current time and start_time.
+     * </pre>
+     *
+     * <code>optional uint64 uptime = 15 [json_name = "uptime"];</code>
+     * @param value The uptime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUptime(long value) {
+      
+      uptime_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of seconds the service has been running since startup.
+     * Calculated dynamically on each request as the difference between current time and start_time.
+     * </pre>
+     *
+     * <code>optional uint64 uptime = 15 [json_name = "uptime"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUptime() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      uptime_ = 0L;
+      onChanged();
+      return this;
+    }
+    @java.lang.Override
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
+      return super.setUnknownFields(unknownFields);
+    }
+
+    @java.lang.Override
+    public final Builder mergeUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
+      return super.mergeUnknownFields(unknownFields);
+    }
+
+
+    // @@protoc_insertion_point(builder_scope:io.altessa.serviceinfo.v1.ServiceInfo)
+  }
+
+  // @@protoc_insertion_point(class_scope:io.altessa.serviceinfo.v1.ServiceInfo)
+  private static final io.altessa.serviceinfo.v1.ServiceInfo DEFAULT_INSTANCE;
+  static {
+    DEFAULT_INSTANCE = new io.altessa.serviceinfo.v1.ServiceInfo();
+  }
+
+  public static io.altessa.serviceinfo.v1.ServiceInfo getDefaultInstance() {
+    return DEFAULT_INSTANCE;
+  }
+
+  private static final com.google.protobuf.Parser<ServiceInfo>
+      PARSER = new com.google.protobuf.AbstractParser<ServiceInfo>() {
+    @java.lang.Override
+    public ServiceInfo parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
+
+  public static com.google.protobuf.Parser<ServiceInfo> parser() {
+    return PARSER;
+  }
+
+  @java.lang.Override
+  public com.google.protobuf.Parser<ServiceInfo> getParserForType() {
+    return PARSER;
+  }
+
+  @java.lang.Override
+  public io.altessa.serviceinfo.v1.ServiceInfo getDefaultInstanceForType() {
+    return DEFAULT_INSTANCE;
+  }
+
 }
+
