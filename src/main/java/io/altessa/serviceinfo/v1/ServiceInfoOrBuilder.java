@@ -315,35 +315,6 @@ java.lang.String defaultValue);
 
   /**
    * <pre>
-   * Version of the Protobuf package or definitions that this service was compiled against.
-   * </pre>
-   *
-   * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-   * @return Whether the protoVersion field is set.
-   */
-  boolean hasProtoVersion();
-  /**
-   * <pre>
-   * Version of the Protobuf package or definitions that this service was compiled against.
-   * </pre>
-   *
-   * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-   * @return The protoVersion.
-   */
-  java.lang.String getProtoVersion();
-  /**
-   * <pre>
-   * Version of the Protobuf package or definitions that this service was compiled against.
-   * </pre>
-   *
-   * <code>optional string proto_version = 12 [json_name = "protoVersion"];</code>
-   * @return The bytes for protoVersion.
-   */
-  com.google.protobuf.ByteString
-      getProtoVersionBytes();
-
-  /**
-   * <pre>
    * Identifier of the current leader instance if this node is not the leader.
    * This is useful for clients to discover the active leader.
    * </pre>
