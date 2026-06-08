@@ -4,12 +4,19 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Provides runtime information about the service instance.
+ * Provides runtime information about the service instance. Implementations
+ * MUST treat `Get` as idempotent and side-effect-free; it is safe to call
+ * from health probes and load balancers, and safe to expose via gRPC
+ * reflection.
+ * Registration order matters in some setups: register
+ * `ServiceInfoService` before gRPC reflection so reflection-based
+ * tooling (grpcurl, Postman, evans) can discover the method without an
+ * extra `.proto` import.
  * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: serviceinfo/v1/serviceinfo_service.proto")
+    comments = "Source: services/serviceinfo/v1/serviceinfo_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ServiceInfoServiceGrpc {
 
@@ -95,14 +102,23 @@ public final class ServiceInfoServiceGrpc {
 
   /**
    * <pre>
-   * Provides runtime information about the service instance.
+   * Provides runtime information about the service instance. Implementations
+   * MUST treat `Get` as idempotent and side-effect-free; it is safe to call
+   * from health probes and load balancers, and safe to expose via gRPC
+   * reflection.
+   * Registration order matters in some setups: register
+   * `ServiceInfoService` before gRPC reflection so reflection-based
+   * tooling (grpcurl, Postman, evans) can discover the method without an
+   * extra `.proto` import.
    * </pre>
    */
   public interface AsyncService {
 
     /**
      * <pre>
-     * Retrieves service metadata including version and build information.
+     * Returns the current `ServiceInfo` snapshot. Cheap — implementations
+     * SHOULD compute the response from cached values and only re-evaluate
+     * time-shaped fields (`uptime`, leadership state) on demand.
      * </pre>
      */
     default void get(com.google.protobuf.Empty request,
@@ -114,7 +130,14 @@ public final class ServiceInfoServiceGrpc {
   /**
    * Base class for the server implementation of the service ServiceInfoService.
    * <pre>
-   * Provides runtime information about the service instance.
+   * Provides runtime information about the service instance. Implementations
+   * MUST treat `Get` as idempotent and side-effect-free; it is safe to call
+   * from health probes and load balancers, and safe to expose via gRPC
+   * reflection.
+   * Registration order matters in some setups: register
+   * `ServiceInfoService` before gRPC reflection so reflection-based
+   * tooling (grpcurl, Postman, evans) can discover the method without an
+   * extra `.proto` import.
    * </pre>
    */
   public static abstract class ServiceInfoServiceImplBase
@@ -128,7 +151,14 @@ public final class ServiceInfoServiceGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service ServiceInfoService.
    * <pre>
-   * Provides runtime information about the service instance.
+   * Provides runtime information about the service instance. Implementations
+   * MUST treat `Get` as idempotent and side-effect-free; it is safe to call
+   * from health probes and load balancers, and safe to expose via gRPC
+   * reflection.
+   * Registration order matters in some setups: register
+   * `ServiceInfoService` before gRPC reflection so reflection-based
+   * tooling (grpcurl, Postman, evans) can discover the method without an
+   * extra `.proto` import.
    * </pre>
    */
   public static final class ServiceInfoServiceStub
@@ -146,7 +176,9 @@ public final class ServiceInfoServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves service metadata including version and build information.
+     * Returns the current `ServiceInfo` snapshot. Cheap — implementations
+     * SHOULD compute the response from cached values and only re-evaluate
+     * time-shaped fields (`uptime`, leadership state) on demand.
      * </pre>
      */
     public void get(com.google.protobuf.Empty request,
@@ -159,7 +191,14 @@ public final class ServiceInfoServiceGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service ServiceInfoService.
    * <pre>
-   * Provides runtime information about the service instance.
+   * Provides runtime information about the service instance. Implementations
+   * MUST treat `Get` as idempotent and side-effect-free; it is safe to call
+   * from health probes and load balancers, and safe to expose via gRPC
+   * reflection.
+   * Registration order matters in some setups: register
+   * `ServiceInfoService` before gRPC reflection so reflection-based
+   * tooling (grpcurl, Postman, evans) can discover the method without an
+   * extra `.proto` import.
    * </pre>
    */
   public static final class ServiceInfoServiceBlockingStub
@@ -177,7 +216,9 @@ public final class ServiceInfoServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves service metadata including version and build information.
+     * Returns the current `ServiceInfo` snapshot. Cheap — implementations
+     * SHOULD compute the response from cached values and only re-evaluate
+     * time-shaped fields (`uptime`, leadership state) on demand.
      * </pre>
      */
     public io.altessa.serviceinfo.v1.ServiceInfo get(com.google.protobuf.Empty request) {
@@ -189,7 +230,14 @@ public final class ServiceInfoServiceGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service ServiceInfoService.
    * <pre>
-   * Provides runtime information about the service instance.
+   * Provides runtime information about the service instance. Implementations
+   * MUST treat `Get` as idempotent and side-effect-free; it is safe to call
+   * from health probes and load balancers, and safe to expose via gRPC
+   * reflection.
+   * Registration order matters in some setups: register
+   * `ServiceInfoService` before gRPC reflection so reflection-based
+   * tooling (grpcurl, Postman, evans) can discover the method without an
+   * extra `.proto` import.
    * </pre>
    */
   public static final class ServiceInfoServiceFutureStub
@@ -207,7 +255,9 @@ public final class ServiceInfoServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves service metadata including version and build information.
+     * Returns the current `ServiceInfo` snapshot. Cheap — implementations
+     * SHOULD compute the response from cached values and only re-evaluate
+     * time-shaped fields (`uptime`, leadership state) on demand.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<io.altessa.serviceinfo.v1.ServiceInfo> get(
